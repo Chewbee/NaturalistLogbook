@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E64B30F813E9EBFA00FA1857 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64B30F713E9EBFA00FA1857 /* UIKit.framework */; };
+		E64B30FA13E9EBFA00FA1857 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64B30F913E9EBFA00FA1857 /* Foundation.framework */; };
+		E64B30FC13E9EBFA00FA1857 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64B30FB13E9EBFA00FA1857 /* CoreGraphics.framework */; };
+		E64B310213E9EBFA00FA1857 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E64B310013E9EBFA00FA1857 /* InfoPlist.strings */; };
+		E64B310513E9EBFA00FA1857 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E64B310413E9EBFA00FA1857 /* main.m */; };
+		E64B310813E9EBFA00FA1857 /* NaturalistLogbookAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E64B310713E9EBFA00FA1857 /* NaturalistLogbookAppDelegate.m */; };
+		E64B310B13E9EBFA00FA1857 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64B310913E9EBFA00FA1857 /* MainWindow.xib */; };
+		E64B310E13E9EBFB00FA1857 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64B310D13E9EBFB00FA1857 /* FirstViewController.m */; };
+		E64B311113E9EBFB00FA1857 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64B311013E9EBFB00FA1857 /* SecondViewController.m */; };
+		E64B311413E9EBFB00FA1857 /* FirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64B311213E9EBFB00FA1857 /* FirstView.xib */; };
+		E64B311713E9EBFB00FA1857 /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64B311513E9EBFB00FA1857 /* SecondView.xib */; };
+		E64B311E13E9EBFB00FA1857 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64B30F713E9EBFA00FA1857 /* UIKit.framework */; };
+		E64B311F13E9EBFB00FA1857 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64B30F913E9EBFA00FA1857 /* Foundation.framework */; };
+		E64B312013E9EBFB00FA1857 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64B30FB13E9EBFA00FA1857 /* CoreGraphics.framework */; };
+		E64B312813E9EBFB00FA1857 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E64B312613E9EBFB00FA1857 /* InfoPlist.strings */; };
+		E64B312B13E9EBFB00FA1857 /* NaturalistLogbookTests.h in Resources */ = {isa = PBXBuildFile; fileRef = E64B312A13E9EBFB00FA1857 /* NaturalistLogbookTests.h */; };
+		E64B312D13E9EBFB00FA1857 /* NaturalistLogbookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E64B312C13E9EBFB00FA1857 /* NaturalistLogbookTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E64B312113E9EBFB00FA1857 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E64B30EA13E9EBFA00FA1857 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E64B30F213E9EBFA00FA1857;
+			remoteInfo = NaturalistLogbook;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E64B30F313E9EBFA00FA1857 /* NaturalistLogbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaturalistLogbook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E64B30F713E9EBFA00FA1857 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E64B30F913E9EBFA00FA1857 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E64B30FB13E9EBFA00FA1857 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E64B30FF13E9EBFA00FA1857 /* NaturalistLogbook-Info.plist */ = {isa = PBXFileReference; path = "NaturalistLogbook-Info.plist"; sourceTree = "<group>"; };
+		E64B310113E9EBFA00FA1857 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E64B310313E9EBFA00FA1857 /* NaturalistLogbook-Prefix.pch */ = {isa = PBXFileReference; path = "NaturalistLogbook-Prefix.pch"; sourceTree = "<group>"; };
+		E64B310413E9EBFA00FA1857 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E64B310613E9EBFA00FA1857 /* NaturalistLogbookAppDelegate.h */ = {isa = PBXFileReference; path = NaturalistLogbookAppDelegate.h; sourceTree = "<group>"; };
+		E64B310713E9EBFA00FA1857 /* NaturalistLogbookAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NaturalistLogbookAppDelegate.m; sourceTree = "<group>"; };
+		E64B310A13E9EBFA00FA1857 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		E64B310C13E9EBFA00FA1857 /* FirstViewController.h */ = {isa = PBXFileReference; path = FirstViewController.h; sourceTree = "<group>"; };
+		E64B310D13E9EBFB00FA1857 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		E64B310F13E9EBFB00FA1857 /* SecondViewController.h */ = {isa = PBXFileReference; path = SecondViewController.h; sourceTree = "<group>"; };
+		E64B311013E9EBFB00FA1857 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		E64B311313E9EBFB00FA1857 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstView.xib; sourceTree = "<group>"; };
+		E64B311613E9EBFB00FA1857 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondView.xib; sourceTree = "<group>"; };
+		E64B311D13E9EBFB00FA1857 /* NaturalistLogbookTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NaturalistLogbookTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E64B312513E9EBFB00FA1857 /* NaturalistLogbookTests-Info.plist */ = {isa = PBXFileReference; path = "NaturalistLogbookTests-Info.plist"; sourceTree = "<group>"; };
+		E64B312713E9EBFB00FA1857 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E64B312913E9EBFB00FA1857 /* NaturalistLogbookTests-Prefix.pch */ = {isa = PBXFileReference; path = "NaturalistLogbookTests-Prefix.pch"; sourceTree = "<group>"; };
+		E64B312A13E9EBFB00FA1857 /* NaturalistLogbookTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NaturalistLogbookTests.h; sourceTree = "<group>"; };
+		E64B312C13E9EBFB00FA1857 /* NaturalistLogbookTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NaturalistLogbookTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E64B30F013E9EBFA00FA1857 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E64B30F813E9EBFA00FA1857 /* UIKit.framework in Frameworks */,
+				E64B30FA13E9EBFA00FA1857 /* Foundation.framework in Frameworks */,
+				E64B30FC13E9EBFA00FA1857 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E64B311913E9EBFB00FA1857 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E64B311E13E9EBFB00FA1857 /* UIKit.framework in Frameworks */,
+				E64B311F13E9EBFB00FA1857 /* Foundation.framework in Frameworks */,
+				E64B312013E9EBFB00FA1857 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E64B30E813E9EBFA00FA1857 = {
+			isa = PBXGroup;
+			children = (
+				E64B30FD13E9EBFA00FA1857 /* NaturalistLogbook */,
+				E64B312313E9EBFB00FA1857 /* NaturalistLogbookTests */,
+				E64B30F613E9EBFA00FA1857 /* Frameworks */,
+				E64B30F413E9EBFA00FA1857 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E64B30F413E9EBFA00FA1857 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E64B30F313E9EBFA00FA1857 /* NaturalistLogbook.app */,
+				E64B311D13E9EBFB00FA1857 /* NaturalistLogbookTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E64B30F613E9EBFA00FA1857 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E64B30F713E9EBFA00FA1857 /* UIKit.framework */,
+				E64B30F913E9EBFA00FA1857 /* Foundation.framework */,
+				E64B30FB13E9EBFA00FA1857 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E64B30FD13E9EBFA00FA1857 /* NaturalistLogbook */ = {
+			isa = PBXGroup;
+			children = (
+				E64B310613E9EBFA00FA1857 /* NaturalistLogbookAppDelegate.h */,
+				E64B310713E9EBFA00FA1857 /* NaturalistLogbookAppDelegate.m */,
+				E64B310913E9EBFA00FA1857 /* MainWindow.xib */,
+				E64B310C13E9EBFA00FA1857 /* FirstViewController.h */,
+				E64B310D13E9EBFB00FA1857 /* FirstViewController.m */,
+				E64B310F13E9EBFB00FA1857 /* SecondViewController.h */,
+				E64B311013E9EBFB00FA1857 /* SecondViewController.m */,
+				E64B311213E9EBFB00FA1857 /* FirstView.xib */,
+				E64B311513E9EBFB00FA1857 /* SecondView.xib */,
+				E64B30FE13E9EBFA00FA1857 /* Supporting Files */,
+			);
+			path = NaturalistLogbook;
+			sourceTree = "<group>";
+		};
+		E64B30FE13E9EBFA00FA1857 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E64B30FF13E9EBFA00FA1857 /* NaturalistLogbook-Info.plist */,
+				E64B310013E9EBFA00FA1857 /* InfoPlist.strings */,
+				E64B310313E9EBFA00FA1857 /* NaturalistLogbook-Prefix.pch */,
+				E64B310413E9EBFA00FA1857 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E64B312313E9EBFB00FA1857 /* NaturalistLogbookTests */ = {
+			isa = PBXGroup;
+			children = (
+				E64B312A13E9EBFB00FA1857 /* NaturalistLogbookTests.h */,
+				E64B312C13E9EBFB00FA1857 /* NaturalistLogbookTests.m */,
+				E64B312413E9EBFB00FA1857 /* Supporting Files */,
+			);
+			path = NaturalistLogbookTests;
+			sourceTree = "<group>";
+		};
+		E64B312413E9EBFB00FA1857 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E64B312513E9EBFB00FA1857 /* NaturalistLogbookTests-Info.plist */,
+				E64B312613E9EBFB00FA1857 /* InfoPlist.strings */,
+				E64B312913E9EBFB00FA1857 /* NaturalistLogbookTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E64B30F213E9EBFA00FA1857 /* NaturalistLogbook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E64B313013E9EBFB00FA1857 /* Build configuration list for PBXNativeTarget "NaturalistLogbook" */;
+			buildPhases = (
+				E64B30EF13E9EBFA00FA1857 /* Sources */,
+				E64B30F013E9EBFA00FA1857 /* Frameworks */,
+				E64B30F113E9EBFA00FA1857 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NaturalistLogbook;
+			productName = NaturalistLogbook;
+			productReference = E64B30F313E9EBFA00FA1857 /* NaturalistLogbook.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E64B311C13E9EBFB00FA1857 /* NaturalistLogbookTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E64B313313E9EBFB00FA1857 /* Build configuration list for PBXNativeTarget "NaturalistLogbookTests" */;
+			buildPhases = (
+				E64B311813E9EBFB00FA1857 /* Sources */,
+				E64B311913E9EBFB00FA1857 /* Frameworks */,
+				E64B311A13E9EBFB00FA1857 /* Resources */,
+				E64B311B13E9EBFB00FA1857 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E64B312213E9EBFB00FA1857 /* PBXTargetDependency */,
+			);
+			name = NaturalistLogbookTests;
+			productName = NaturalistLogbookTests;
+			productReference = E64B311D13E9EBFB00FA1857 /* NaturalistLogbookTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E64B30EA13E9EBFA00FA1857 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = E64B30ED13E9EBFA00FA1857 /* Build configuration list for PBXProject "NaturalistLogbook" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E64B30E813E9EBFA00FA1857;
+			productRefGroup = E64B30F413E9EBFA00FA1857 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E64B30F213E9EBFA00FA1857 /* NaturalistLogbook */,
+				E64B311C13E9EBFB00FA1857 /* NaturalistLogbookTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E64B30F113E9EBFA00FA1857 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E64B310213E9EBFA00FA1857 /* InfoPlist.strings in Resources */,
+				E64B310B13E9EBFA00FA1857 /* MainWindow.xib in Resources */,
+				E64B311413E9EBFB00FA1857 /* FirstView.xib in Resources */,
+				E64B311713E9EBFB00FA1857 /* SecondView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E64B311A13E9EBFB00FA1857 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E64B312813E9EBFB00FA1857 /* InfoPlist.strings in Resources */,
+				E64B312B13E9EBFB00FA1857 /* NaturalistLogbookTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E64B311B13E9EBFB00FA1857 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E64B30EF13E9EBFA00FA1857 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E64B310513E9EBFA00FA1857 /* main.m in Sources */,
+				E64B310813E9EBFA00FA1857 /* NaturalistLogbookAppDelegate.m in Sources */,
+				E64B310E13E9EBFB00FA1857 /* FirstViewController.m in Sources */,
+				E64B311113E9EBFB00FA1857 /* SecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E64B311813E9EBFB00FA1857 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E64B312D13E9EBFB00FA1857 /* NaturalistLogbookTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E64B312213E9EBFB00FA1857 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E64B30F213E9EBFA00FA1857 /* NaturalistLogbook */;
+			targetProxy = E64B312113E9EBFB00FA1857 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E64B310013E9EBFA00FA1857 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E64B310113E9EBFA00FA1857 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E64B310913E9EBFA00FA1857 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E64B310A13E9EBFA00FA1857 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		E64B311213E9EBFB00FA1857 /* FirstView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E64B311313E9EBFB00FA1857 /* en */,
+			);
+			name = FirstView.xib;
+			sourceTree = "<group>";
+		};
+		E64B311513E9EBFB00FA1857 /* SecondView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E64B311613E9EBFB00FA1857 /* en */,
+			);
+			name = SecondView.xib;
+			sourceTree = "<group>";
+		};
+		E64B312613E9EBFB00FA1857 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E64B312713E9EBFB00FA1857 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E64B312E13E9EBFB00FA1857 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E64B312F13E9EBFB00FA1857 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		E64B313113E9EBFB00FA1857 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NaturalistLogbook/NaturalistLogbook-Prefix.pch";
+				INFOPLIST_FILE = "NaturalistLogbook/NaturalistLogbook-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E64B313213E9EBFB00FA1857 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NaturalistLogbook/NaturalistLogbook-Prefix.pch";
+				INFOPLIST_FILE = "NaturalistLogbook/NaturalistLogbook-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		E64B313413E9EBFB00FA1857 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NaturalistLogbook.app/NaturalistLogbook";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NaturalistLogbookTests/NaturalistLogbookTests-Prefix.pch";
+				INFOPLIST_FILE = "NaturalistLogbookTests/NaturalistLogbookTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		E64B313513E9EBFB00FA1857 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NaturalistLogbook.app/NaturalistLogbook";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NaturalistLogbookTests/NaturalistLogbookTests-Prefix.pch";
+				INFOPLIST_FILE = "NaturalistLogbookTests/NaturalistLogbookTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E64B30ED13E9EBFA00FA1857 /* Build configuration list for PBXProject "NaturalistLogbook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E64B312E13E9EBFB00FA1857 /* Debug */,
+				E64B312F13E9EBFB00FA1857 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E64B313013E9EBFB00FA1857 /* Build configuration list for PBXNativeTarget "NaturalistLogbook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E64B313113E9EBFB00FA1857 /* Debug */,
+				E64B313213E9EBFB00FA1857 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E64B313313E9EBFB00FA1857 /* Build configuration list for PBXNativeTarget "NaturalistLogbookTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E64B313413E9EBFB00FA1857 /* Debug */,
+				E64B313513E9EBFB00FA1857 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E64B30EA13E9EBFA00FA1857 /* Project object */;
+}

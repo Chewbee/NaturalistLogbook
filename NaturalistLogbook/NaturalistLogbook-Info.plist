@@ -21,7 +21,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>UIStatusBarStyle</key>
-	<string>UIStatusBarStyleBlackTranslucent</string>
+	<string>UIStatusBarStyleBlackOpaque</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
@@ -36,6 +36,12 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+	</array>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>location-services</string>
+		<string>gps</string>
+		<string>magnetometer</string>
 	</array>
 </dict>
 </plist>

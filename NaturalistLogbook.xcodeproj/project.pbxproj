@@ -26,6 +26,13 @@
 		E64B313F13E9FAA000FA1857 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64B313E13E9FAA000FA1857 /* MapKit.framework */; };
 		E64B314113E9FAB000FA1857 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64B314013E9FAB000FA1857 /* CoreLocation.framework */; };
 		E64B314413EADFF700FA1857 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64B314213EADFF700FA1857 /* MapViewController.xib */; };
+		E64B314F13EB4DAF00FA1857 /* 74-location.png in Resources */ = {isa = PBXBuildFile; fileRef = E64B314E13EB4DAF00FA1857 /* 74-location.png */; };
+		E64B315113EB4F4200FA1857 /* 103-map.png in Resources */ = {isa = PBXBuildFile; fileRef = E64B315013EB4F4200FA1857 /* 103-map.png */; };
+		E64B315313EB4FAA00FA1857 /* 20-gear2.png in Resources */ = {isa = PBXBuildFile; fileRef = E64B315213EB4FAA00FA1857 /* 20-gear2.png */; };
+		E64B315513EB510700FA1857 /* 86-camera.png in Resources */ = {isa = PBXBuildFile; fileRef = E64B315413EB510700FA1857 /* 86-camera.png */; };
+		E64B315913EB514100FA1857 /* 68-paperclip.png in Resources */ = {isa = PBXBuildFile; fileRef = E64B315613EB514100FA1857 /* 68-paperclip.png */; };
+		E64B315A13EB514100FA1857 /* 72-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = E64B315713EB514100FA1857 /* 72-pin.png */; };
+		E64B315B13EB514100FA1857 /* 95-equalizer.png in Resources */ = {isa = PBXBuildFile; fileRef = E64B315813EB514100FA1857 /* 95-equalizer.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +71,13 @@
 		E64B313E13E9FAA000FA1857 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E64B314013E9FAB000FA1857 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		E64B314313EADFF700FA1857 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MapViewController.xib; sourceTree = "<group>"; };
+		E64B314E13EB4DAF00FA1857 /* 74-location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "74-location.png"; sourceTree = "<group>"; };
+		E64B315013EB4F4200FA1857 /* 103-map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "103-map.png"; sourceTree = "<group>"; };
+		E64B315213EB4FAA00FA1857 /* 20-gear2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "20-gear2.png"; sourceTree = "<group>"; };
+		E64B315413EB510700FA1857 /* 86-camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "86-camera.png"; sourceTree = "<group>"; };
+		E64B315613EB514100FA1857 /* 68-paperclip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "68-paperclip.png"; sourceTree = "<group>"; };
+		E64B315713EB514100FA1857 /* 72-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "72-pin.png"; sourceTree = "<group>"; };
+		E64B315813EB514100FA1857 /* 95-equalizer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "95-equalizer.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +109,7 @@
 		E64B30E813E9EBFA00FA1857 = {
 			isa = PBXGroup;
 			children = (
+				E64B314513EAE0B000FA1857 /* Resources */,
 				E64B30FD13E9EBFA00FA1857 /* NaturalistLogbook */,
 				E64B312313E9EBFB00FA1857 /* NaturalistLogbookTests */,
 				E64B30F613E9EBFA00FA1857 /* Frameworks */,
@@ -128,13 +143,10 @@
 			children = (
 				E64B310613E9EBFA00FA1857 /* NaturalistLogbookAppDelegate.h */,
 				E64B310713E9EBFA00FA1857 /* NaturalistLogbookAppDelegate.m */,
-				E64B310913E9EBFA00FA1857 /* MainWindow.xib */,
 				E64B310C13E9EBFA00FA1857 /* MapViewController.h */,
 				E64B310D13E9EBFB00FA1857 /* MapViewController.m */,
 				E64B310F13E9EBFB00FA1857 /* SecondViewController.h */,
 				E64B311013E9EBFB00FA1857 /* SecondViewController.m */,
-				E64B314213EADFF700FA1857 /* MapViewController.xib */,
-				E64B311513E9EBFB00FA1857 /* SecondView.xib */,
 				E64B30FE13E9EBFA00FA1857 /* Supporting Files */,
 			);
 			path = NaturalistLogbook;
@@ -169,6 +181,24 @@
 				E64B312913E9EBFB00FA1857 /* NaturalistLogbookTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E64B314513EAE0B000FA1857 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E64B315613EB514100FA1857 /* 68-paperclip.png */,
+				E64B315713EB514100FA1857 /* 72-pin.png */,
+				E64B315813EB514100FA1857 /* 95-equalizer.png */,
+				E64B315413EB510700FA1857 /* 86-camera.png */,
+				E64B315213EB4FAA00FA1857 /* 20-gear2.png */,
+				E64B315013EB4F4200FA1857 /* 103-map.png */,
+				E64B314E13EB4DAF00FA1857 /* 74-location.png */,
+				E64B311513E9EBFB00FA1857 /* SecondView.xib */,
+				E64B314213EADFF700FA1857 /* MapViewController.xib */,
+				E64B310913E9EBFA00FA1857 /* MainWindow.xib */,
+			);
+			name = Resources;
+			path = NaturalistLogbook;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +272,13 @@
 				E64B310B13E9EBFA00FA1857 /* MainWindow.xib in Resources */,
 				E64B311713E9EBFB00FA1857 /* SecondView.xib in Resources */,
 				E64B314413EADFF700FA1857 /* MapViewController.xib in Resources */,
+				E64B314F13EB4DAF00FA1857 /* 74-location.png in Resources */,
+				E64B315113EB4F4200FA1857 /* 103-map.png in Resources */,
+				E64B315313EB4FAA00FA1857 /* 20-gear2.png in Resources */,
+				E64B315513EB510700FA1857 /* 86-camera.png in Resources */,
+				E64B315913EB514100FA1857 /* 68-paperclip.png in Resources */,
+				E64B315A13EB514100FA1857 /* 72-pin.png in Resources */,
+				E64B315B13EB514100FA1857 /* 95-equalizer.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

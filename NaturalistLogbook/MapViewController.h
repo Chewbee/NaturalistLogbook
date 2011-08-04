@@ -13,12 +13,22 @@
 @interface MapViewController : UIViewController <MKMapViewDelegate>{
 
     MKMapView *mapView;
+    NSMutableArray *mapAnnotations ;
     
-    NSMutableArray *mapAnnotations;
+    UIToolbar *toolbar ; 
+    UIBarButtonItem *locateButton ;
+    UIBarButtonItem *cameraButton ;
+
 
 }
 @property (nonatomic, retain) IBOutlet MKMapView *mapView;
 @property (nonatomic, retain) NSMutableArray *mapAnnotations;
+@property (nonatomic,retain) IBOutlet UIBarButtonItem *locateButton ;
+@property (nonatomic,retain) IBOutlet UIBarButtonItem *cameraButton ;
+@property (nonatomic,retain) IBOutlet UIToolbar *toolbar ; 
+
+- (IBAction)locateUser:(id)sender;
+- (IBAction)triggerCamera:(id)sender;
 
 
 @end

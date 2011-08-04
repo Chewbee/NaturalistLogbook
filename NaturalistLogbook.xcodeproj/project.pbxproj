@@ -14,9 +14,8 @@
 		E64B310513E9EBFA00FA1857 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E64B310413E9EBFA00FA1857 /* main.m */; };
 		E64B310813E9EBFA00FA1857 /* NaturalistLogbookAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E64B310713E9EBFA00FA1857 /* NaturalistLogbookAppDelegate.m */; };
 		E64B310B13E9EBFA00FA1857 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64B310913E9EBFA00FA1857 /* MainWindow.xib */; };
-		E64B310E13E9EBFB00FA1857 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64B310D13E9EBFB00FA1857 /* FirstViewController.m */; };
+		E64B310E13E9EBFB00FA1857 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64B310D13E9EBFB00FA1857 /* MapViewController.m */; };
 		E64B311113E9EBFB00FA1857 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64B311013E9EBFB00FA1857 /* SecondViewController.m */; };
-		E64B311413E9EBFB00FA1857 /* FirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64B311213E9EBFB00FA1857 /* FirstView.xib */; };
 		E64B311713E9EBFB00FA1857 /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64B311513E9EBFB00FA1857 /* SecondView.xib */; };
 		E64B311E13E9EBFB00FA1857 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64B30F713E9EBFA00FA1857 /* UIKit.framework */; };
 		E64B311F13E9EBFB00FA1857 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64B30F913E9EBFA00FA1857 /* Foundation.framework */; };
@@ -24,6 +23,9 @@
 		E64B312813E9EBFB00FA1857 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E64B312613E9EBFB00FA1857 /* InfoPlist.strings */; };
 		E64B312B13E9EBFB00FA1857 /* NaturalistLogbookTests.h in Resources */ = {isa = PBXBuildFile; fileRef = E64B312A13E9EBFB00FA1857 /* NaturalistLogbookTests.h */; };
 		E64B312D13E9EBFB00FA1857 /* NaturalistLogbookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E64B312C13E9EBFB00FA1857 /* NaturalistLogbookTests.m */; };
+		E64B313F13E9FAA000FA1857 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64B313E13E9FAA000FA1857 /* MapKit.framework */; };
+		E64B314113E9FAB000FA1857 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64B314013E9FAB000FA1857 /* CoreLocation.framework */; };
+		E64B314413EADFF700FA1857 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64B314213EADFF700FA1857 /* MapViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,25 +43,27 @@
 		E64B30F713E9EBFA00FA1857 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E64B30F913E9EBFA00FA1857 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E64B30FB13E9EBFA00FA1857 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		E64B30FF13E9EBFA00FA1857 /* NaturalistLogbook-Info.plist */ = {isa = PBXFileReference; path = "NaturalistLogbook-Info.plist"; sourceTree = "<group>"; };
+		E64B30FF13E9EBFA00FA1857 /* NaturalistLogbook-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NaturalistLogbook-Info.plist"; sourceTree = "<group>"; };
 		E64B310113E9EBFA00FA1857 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E64B310313E9EBFA00FA1857 /* NaturalistLogbook-Prefix.pch */ = {isa = PBXFileReference; path = "NaturalistLogbook-Prefix.pch"; sourceTree = "<group>"; };
+		E64B310313E9EBFA00FA1857 /* NaturalistLogbook-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NaturalistLogbook-Prefix.pch"; sourceTree = "<group>"; };
 		E64B310413E9EBFA00FA1857 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E64B310613E9EBFA00FA1857 /* NaturalistLogbookAppDelegate.h */ = {isa = PBXFileReference; path = NaturalistLogbookAppDelegate.h; sourceTree = "<group>"; };
+		E64B310613E9EBFA00FA1857 /* NaturalistLogbookAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NaturalistLogbookAppDelegate.h; sourceTree = "<group>"; };
 		E64B310713E9EBFA00FA1857 /* NaturalistLogbookAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NaturalistLogbookAppDelegate.m; sourceTree = "<group>"; };
 		E64B310A13E9EBFA00FA1857 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		E64B310C13E9EBFA00FA1857 /* FirstViewController.h */ = {isa = PBXFileReference; path = FirstViewController.h; sourceTree = "<group>"; };
-		E64B310D13E9EBFB00FA1857 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		E64B310F13E9EBFB00FA1857 /* SecondViewController.h */ = {isa = PBXFileReference; path = SecondViewController.h; sourceTree = "<group>"; };
+		E64B310C13E9EBFA00FA1857 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		E64B310D13E9EBFB00FA1857 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		E64B310F13E9EBFB00FA1857 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		E64B311013E9EBFB00FA1857 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		E64B311313E9EBFB00FA1857 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstView.xib; sourceTree = "<group>"; };
 		E64B311613E9EBFB00FA1857 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondView.xib; sourceTree = "<group>"; };
 		E64B311D13E9EBFB00FA1857 /* NaturalistLogbookTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NaturalistLogbookTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E64B312513E9EBFB00FA1857 /* NaturalistLogbookTests-Info.plist */ = {isa = PBXFileReference; path = "NaturalistLogbookTests-Info.plist"; sourceTree = "<group>"; };
+		E64B312513E9EBFB00FA1857 /* NaturalistLogbookTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NaturalistLogbookTests-Info.plist"; sourceTree = "<group>"; };
 		E64B312713E9EBFB00FA1857 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E64B312913E9EBFB00FA1857 /* NaturalistLogbookTests-Prefix.pch */ = {isa = PBXFileReference; path = "NaturalistLogbookTests-Prefix.pch"; sourceTree = "<group>"; };
+		E64B312913E9EBFB00FA1857 /* NaturalistLogbookTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NaturalistLogbookTests-Prefix.pch"; sourceTree = "<group>"; };
 		E64B312A13E9EBFB00FA1857 /* NaturalistLogbookTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NaturalistLogbookTests.h; sourceTree = "<group>"; };
 		E64B312C13E9EBFB00FA1857 /* NaturalistLogbookTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NaturalistLogbookTests.m; sourceTree = "<group>"; };
+		E64B313E13E9FAA000FA1857 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E64B314013E9FAB000FA1857 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		E64B314313EADFF700FA1857 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MapViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,8 @@
 				E64B30F813E9EBFA00FA1857 /* UIKit.framework in Frameworks */,
 				E64B30FA13E9EBFA00FA1857 /* Foundation.framework in Frameworks */,
 				E64B30FC13E9EBFA00FA1857 /* CoreGraphics.framework in Frameworks */,
+				E64B314113E9FAB000FA1857 /* CoreLocation.framework in Frameworks */,
+				E64B313F13E9FAA000FA1857 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +114,8 @@
 		E64B30F613E9EBFA00FA1857 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E64B314013E9FAB000FA1857 /* CoreLocation.framework */,
+				E64B313E13E9FAA000FA1857 /* MapKit.framework */,
 				E64B30F713E9EBFA00FA1857 /* UIKit.framework */,
 				E64B30F913E9EBFA00FA1857 /* Foundation.framework */,
 				E64B30FB13E9EBFA00FA1857 /* CoreGraphics.framework */,
@@ -121,11 +129,11 @@
 				E64B310613E9EBFA00FA1857 /* NaturalistLogbookAppDelegate.h */,
 				E64B310713E9EBFA00FA1857 /* NaturalistLogbookAppDelegate.m */,
 				E64B310913E9EBFA00FA1857 /* MainWindow.xib */,
-				E64B310C13E9EBFA00FA1857 /* FirstViewController.h */,
-				E64B310D13E9EBFB00FA1857 /* FirstViewController.m */,
+				E64B310C13E9EBFA00FA1857 /* MapViewController.h */,
+				E64B310D13E9EBFB00FA1857 /* MapViewController.m */,
 				E64B310F13E9EBFB00FA1857 /* SecondViewController.h */,
 				E64B311013E9EBFB00FA1857 /* SecondViewController.m */,
-				E64B311213E9EBFB00FA1857 /* FirstView.xib */,
+				E64B314213EADFF700FA1857 /* MapViewController.xib */,
 				E64B311513E9EBFB00FA1857 /* SecondView.xib */,
 				E64B30FE13E9EBFA00FA1857 /* Supporting Files */,
 			);
@@ -232,8 +240,8 @@
 			files = (
 				E64B310213E9EBFA00FA1857 /* InfoPlist.strings in Resources */,
 				E64B310B13E9EBFA00FA1857 /* MainWindow.xib in Resources */,
-				E64B311413E9EBFB00FA1857 /* FirstView.xib in Resources */,
 				E64B311713E9EBFB00FA1857 /* SecondView.xib in Resources */,
+				E64B314413EADFF700FA1857 /* MapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +279,7 @@
 			files = (
 				E64B310513E9EBFA00FA1857 /* main.m in Sources */,
 				E64B310813E9EBFA00FA1857 /* NaturalistLogbookAppDelegate.m in Sources */,
-				E64B310E13E9EBFB00FA1857 /* FirstViewController.m in Sources */,
+				E64B310E13E9EBFB00FA1857 /* MapViewController.m in Sources */,
 				E64B311113E9EBFB00FA1857 /* SecondViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,14 +319,6 @@
 			name = MainWindow.xib;
 			sourceTree = "<group>";
 		};
-		E64B311213E9EBFB00FA1857 /* FirstView.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E64B311313E9EBFB00FA1857 /* en */,
-			);
-			name = FirstView.xib;
-			sourceTree = "<group>";
-		};
 		E64B311513E9EBFB00FA1857 /* SecondView.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -333,6 +333,14 @@
 				E64B312713E9EBFB00FA1857 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E64B314213EADFF700FA1857 /* MapViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E64B314313EADFF700FA1857 /* en */,
+			);
+			name = MapViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

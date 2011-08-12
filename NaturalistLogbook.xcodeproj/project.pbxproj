@@ -33,6 +33,9 @@
 		E64B315913EB514100FA1857 /* 68-paperclip.png in Resources */ = {isa = PBXBuildFile; fileRef = E64B315613EB514100FA1857 /* 68-paperclip.png */; };
 		E64B315A13EB514100FA1857 /* 72-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = E64B315713EB514100FA1857 /* 72-pin.png */; };
 		E64B315B13EB514100FA1857 /* 95-equalizer.png in Resources */ = {isa = PBXBuildFile; fileRef = E64B315813EB514100FA1857 /* 95-equalizer.png */; };
+		E64B315D13EC377200FA1857 /* 71-compass.png in Resources */ = {isa = PBXBuildFile; fileRef = E64B315C13EC377200FA1857 /* 71-compass.png */; };
+		E64B316013EC458200FA1857 /* MKMapView+Draw.m in Sources */ = {isa = PBXBuildFile; fileRef = E64B315F13EC458200FA1857 /* MKMapView+Draw.m */; };
+		E64B316B13EC9E3B00FA1857 /* UserLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = E64B316A13EC9E3B00FA1857 /* UserLocationView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +81,11 @@
 		E64B315613EB514100FA1857 /* 68-paperclip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "68-paperclip.png"; sourceTree = "<group>"; };
 		E64B315713EB514100FA1857 /* 72-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "72-pin.png"; sourceTree = "<group>"; };
 		E64B315813EB514100FA1857 /* 95-equalizer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "95-equalizer.png"; sourceTree = "<group>"; };
+		E64B315C13EC377200FA1857 /* 71-compass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "71-compass.png"; sourceTree = "<group>"; };
+		E64B315E13EC458200FA1857 /* MKMapView+Draw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKMapView+Draw.h"; sourceTree = "<group>"; };
+		E64B315F13EC458200FA1857 /* MKMapView+Draw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+Draw.m"; sourceTree = "<group>"; };
+		E64B316913EC9E3B00FA1857 /* UserLocationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLocationView.h; sourceTree = "<group>"; };
+		E64B316A13EC9E3B00FA1857 /* UserLocationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLocationView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +149,10 @@
 		E64B30FD13E9EBFA00FA1857 /* NaturalistLogbook */ = {
 			isa = PBXGroup;
 			children = (
+				E64B316913EC9E3B00FA1857 /* UserLocationView.h */,
+				E64B316A13EC9E3B00FA1857 /* UserLocationView.m */,
+				E64B315F13EC458200FA1857 /* MKMapView+Draw.m */,
+				E64B315E13EC458200FA1857 /* MKMapView+Draw.h */,
 				E64B310613E9EBFA00FA1857 /* NaturalistLogbookAppDelegate.h */,
 				E64B310713E9EBFA00FA1857 /* NaturalistLogbookAppDelegate.m */,
 				E64B310C13E9EBFA00FA1857 /* MapViewController.h */,
@@ -186,6 +198,7 @@
 		E64B314513EAE0B000FA1857 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E64B315C13EC377200FA1857 /* 71-compass.png */,
 				E64B315613EB514100FA1857 /* 68-paperclip.png */,
 				E64B315713EB514100FA1857 /* 72-pin.png */,
 				E64B315813EB514100FA1857 /* 95-equalizer.png */,
@@ -279,6 +292,7 @@
 				E64B315913EB514100FA1857 /* 68-paperclip.png in Resources */,
 				E64B315A13EB514100FA1857 /* 72-pin.png in Resources */,
 				E64B315B13EB514100FA1857 /* 95-equalizer.png in Resources */,
+				E64B315D13EC377200FA1857 /* 71-compass.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +332,8 @@
 				E64B310813E9EBFA00FA1857 /* NaturalistLogbookAppDelegate.m in Sources */,
 				E64B310E13E9EBFB00FA1857 /* MapViewController.m in Sources */,
 				E64B311113E9EBFB00FA1857 /* SecondViewController.m in Sources */,
+				E64B316013EC458200FA1857 /* MKMapView+Draw.m in Sources */,
+				E64B316B13EC9E3B00FA1857 /* UserLocationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +403,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -395,7 +413,8 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				"PROVISIONING_PROFILE[sdk=*]" = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -404,13 +423,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 			};
 			name = Release;
@@ -506,6 +528,7 @@
 				E64B313213E9EBFB00FA1857 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E64B313313E9EBFB00FA1857 /* Build configuration list for PBXNativeTarget "NaturalistLogbookTests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +537,7 @@
 				E64B313513E9EBFB00FA1857 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

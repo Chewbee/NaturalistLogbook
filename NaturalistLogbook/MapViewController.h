@@ -8,27 +8,45 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import "UserLocationView.h"
 
 
-@interface MapViewController : UIViewController <MKMapViewDelegate>{
+@interface MapViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate>{
 
-    MKMapView *mapView;
+    IBOutlet MKMapView *mapView;
     NSMutableArray *mapAnnotations ;
     
-    UIToolbar *toolbar ; 
-    UIBarButtonItem *locateButton ;
-    UIBarButtonItem *cameraButton ;
-
+    IBOutlet UIActivityIndicatorView *uiaiv;
+   
+    IBOutlet UIToolbar *toolbar ; 
+    IBOutlet UIBarButtonItem *locateButton ;
+    IBOutlet UIBarButtonItem *bearingButton;
+    IBOutlet UIBarButtonItem *cameraButton ;
+    CLLocationManager *locationManager ; 
+    
+    CLLocationCoordinate2D userPosition ; 
+    CLLocation *userLocation ; 
+    double  userHeading ; 
+    
+    UserLocationView *userView ; 
 
 }
+@property (nonatomic,retain) UserLocationView *userView ;
+@property (nonatomic,retain) CLLocation *userLocation ; 
+@property (nonatomic) double userHeading ; 
 @property (nonatomic, retain) IBOutlet MKMapView *mapView;
 @property (nonatomic, retain) NSMutableArray *mapAnnotations;
 @property (nonatomic,retain) IBOutlet UIBarButtonItem *locateButton ;
+@property (nonatomic,retain) IBOutlet UIBarButtonItem *bearingButton ;
 @property (nonatomic,retain) IBOutlet UIBarButtonItem *cameraButton ;
 @property (nonatomic,retain) IBOutlet UIToolbar *toolbar ; 
+@property (nonatomic, retain ) IBOutlet UIActivityIndicatorView *uiaiv;
 
 - (IBAction)locateUser:(id)sender;
 - (IBAction)triggerCamera:(id)sender;
+- (IBAction)toggleCompass:(id)sender;
+
+- (void)startLocationStandardUpdates ; 
 
 
 @end

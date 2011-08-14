@@ -1,5 +1,5 @@
 //
-//  FirstViewController.m
+//  MapViewController.m
 //  NaturalistLogbook
 //
 //  Created by Georges-Henry Portefait on 03/08/11.
@@ -7,11 +7,11 @@
 //
 
 #import "MapViewController.h"
-
-
+#import "WildcardGestureRecognizer.h"
+#import "poiAnnotation.h"
 
 @implementation MapViewController
-@synthesize mapView, mapAnnotations, locateButton, toolbar ,cameraButton, uiaiv, bearingButton ,userLocation, userHeading, userView ;
+@synthesize mapView, mapAnnotations, locateButton, toolbar ,cameraButton, uiaiv ,userLocation, userHeading, userView , whenHit, poi;
 
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -19,9 +19,19 @@
 {
     [super viewDidLoad] ;
     [mapView setMapType:MKMapTypeHybrid ] ;
+    [self startLocationStandardUpdates ] ; 
     
+    [self setWhenHit:0.0f ];
     
-    [ self startLocationStandardUpdates ] ; 
+   
+    WildcardGestureRecognizer * tapInterceptor = [[[WildcardGestureRecognizer alloc] init] autorelease] ;
+    tapInterceptor.touchesBeganCallback = ^(NSSet * touches, UIEvent * event) {
+        [self handleTouchBegan:touches ];
+    };
+    tapInterceptor.touchesEndedCallback = ^(NSSet * touches, UIEvent * event) {
+        [self handleTouchEnded:touches ];
+    };
+    [mapView addGestureRecognizer:tapInterceptor];
 }
 - (void) viewDidAppear:(BOOL)animated
 {
@@ -50,13 +60,12 @@
 {
     [uiaiv release];
     uiaiv = nil;
-    [bearingButton release];
-    bearingButton = nil;
     
     [super viewDidUnload];
 
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+    [userView release];
 }
 
 
@@ -64,7 +73,6 @@
 {
     [uiaiv release];
     [locationManager release ] ; 
-    [bearingButton release];
     [userView release ];
     
     [super dealloc];
@@ -78,15 +86,23 @@
     [mapView setRegion:region animated:TRUE];
 }
 - (IBAction)triggerCamera:(id)sender {
-    
-    UIImagePickerController *uipc = [[UIImagePickerController alloc ]init];
-    [uipc presentModalViewController:self animated:TRUE ] ;
-};
-
-- (IBAction)toggleCompass:(id)sender {
-    [locationManager startUpdatingHeading] ;
+    if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera ] ) {
+        
+        NSArray *availableMedia ; 
+        availableMedia = [UIImagePickerController availableMediaTypesForSourceType: UIImagePickerControllerSourceTypeCamera ] ; 
+        
+        if([UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceRear]){
+            
+            
+            UIImagePickerController *uipc = [[UIImagePickerController alloc ]init] ;
+            if (uipc!=nil) {
+                [uipc setCameraCaptureMode: UIImagePickerControllerCameraCaptureModePhoto] ;
+                
+                [self presentModalViewController:uipc animated:TRUE ] ;
+            }
+        }
+    } 
 }
-
 - (void)startLocationStandardUpdates
 {
     // Create the location manager if this object does not
@@ -165,6 +181,57 @@
     }
         
     return nil;
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [self dismissModalViewControllerAnimated:TRUE] ;
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    NSLog(@"didFinishPickingMediaWithInfo") ;
+}
+
+- (void) handleTouchBegan: (NSSet *) touches {
+    
+    if ([touches count] == 1 ) 
+    {
+         NSLog(@"handleTouchBegan");
+        [self setWhenHit:[(UITouch*)[touches anyObject] timestamp ]];
+        CGPoint where = [[touches anyObject] locationInView:mapView] ;
+        CLLocationCoordinate2D coord2D = [mapView convertPoint:where toCoordinateFromView:mapView] ;
+        [self setPoi:[[poiAnnotation alloc] init] ];
+        [poi setCoordinate:coord2D] ;
+
+        UIAlertView *av = [[UIAlertView alloc ]initWithTitle:@"pin creation" message:@"Do you want to drop a pin" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok",nil ];
+        [av show];
+    }
+}
+-(void) handleTouchEnded:(NSSet *) touches {
+    
+//    NSTimeInterval now = [(UITouch*)[touches anyObject] timestamp ];
+//    
+//    if ([touches count] == 1 && now - whenHit > 3.0f ) 
+//    {
+//        NSLog(@"handleTouchEnded");
+//        [self setWhenHit:0.0f];
+//        
+//        CGPoint where = [[touches anyObject] locationInView:mapView] ;
+//        CLLocationCoordinate2D coord2D = [mapView convertPoint:where toCoordinateFromView:mapView] ;
+//        [self setPoi:[[poiAnnotation alloc] init]];
+//        [poi setCoordinate:coord2D] ;
+//        
+//        [mapView addAnnotation: poi];
+//    }
+}
+
+- (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex > 0) {
+                
+        [mapView addAnnotation: [self poi]];
+        [[self poi]release];
+        poi = nil;
+    }
 }
 
 @end

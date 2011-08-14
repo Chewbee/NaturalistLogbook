@@ -36,6 +36,8 @@
 		E64B315D13EC377200FA1857 /* 71-compass.png in Resources */ = {isa = PBXBuildFile; fileRef = E64B315C13EC377200FA1857 /* 71-compass.png */; };
 		E64B316013EC458200FA1857 /* MKMapView+Draw.m in Sources */ = {isa = PBXBuildFile; fileRef = E64B315F13EC458200FA1857 /* MKMapView+Draw.m */; };
 		E64B316B13EC9E3B00FA1857 /* UserLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = E64B316A13EC9E3B00FA1857 /* UserLocationView.m */; };
+		E6C4894A13F85D9500D3FE8D /* WildcardGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C4894913F85D9500D3FE8D /* WildcardGestureRecognizer.m */; };
+		E6C4894D13F86C7800D3FE8D /* poiAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C4894C13F86C7800D3FE8D /* poiAnnotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,10 @@
 		E64B315F13EC458200FA1857 /* MKMapView+Draw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+Draw.m"; sourceTree = "<group>"; };
 		E64B316913EC9E3B00FA1857 /* UserLocationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLocationView.h; sourceTree = "<group>"; };
 		E64B316A13EC9E3B00FA1857 /* UserLocationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLocationView.m; sourceTree = "<group>"; };
+		E6C4894813F85D9500D3FE8D /* WildcardGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WildcardGestureRecognizer.h; sourceTree = "<group>"; };
+		E6C4894913F85D9500D3FE8D /* WildcardGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WildcardGestureRecognizer.m; sourceTree = "<group>"; };
+		E6C4894B13F86C7800D3FE8D /* poiAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = poiAnnotation.h; sourceTree = "<group>"; };
+		E6C4894C13F86C7800D3FE8D /* poiAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = poiAnnotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +155,10 @@
 		E64B30FD13E9EBFA00FA1857 /* NaturalistLogbook */ = {
 			isa = PBXGroup;
 			children = (
+				E6C4894B13F86C7800D3FE8D /* poiAnnotation.h */,
+				E6C4894C13F86C7800D3FE8D /* poiAnnotation.m */,
+				E6C4894813F85D9500D3FE8D /* WildcardGestureRecognizer.h */,
+				E6C4894913F85D9500D3FE8D /* WildcardGestureRecognizer.m */,
 				E64B316913EC9E3B00FA1857 /* UserLocationView.h */,
 				E64B316A13EC9E3B00FA1857 /* UserLocationView.m */,
 				E64B315F13EC458200FA1857 /* MKMapView+Draw.m */,
@@ -334,6 +344,8 @@
 				E64B311113E9EBFB00FA1857 /* SecondViewController.m in Sources */,
 				E64B316013EC458200FA1857 /* MKMapView+Draw.m in Sources */,
 				E64B316B13EC9E3B00FA1857 /* UserLocationView.m in Sources */,
+				E6C4894A13F85D9500D3FE8D /* WildcardGestureRecognizer.m in Sources */,
+				E6C4894D13F86C7800D3FE8D /* poiAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

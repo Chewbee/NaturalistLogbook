@@ -12,8 +12,19 @@
 
 
 @synthesize window=_window;
-
 @synthesize tabBarController=_tabBarController;
+@synthesize managedObjectContext ; 
+@synthesize managedObjectModel ; 
+@synthesize persistentStoreCoordinator ; 
+
+- (NSURL *)applicationDocumentsDirectory
+{
+    return nil ; 
+}
+- (void)saveContext
+{
+    
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -63,12 +74,6 @@
      */
 }
 
-- (void)dealloc
-{
-    [_window release];
-    [_tabBarController release];
-    [super dealloc];
-}
 
 
 // Optional UITabBarControllerDelegate method.

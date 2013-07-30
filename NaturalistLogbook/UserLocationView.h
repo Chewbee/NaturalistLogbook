@@ -25,7 +25,7 @@
 }
 
 @property (nonatomic)           double heading ; 
-@property (nonatomic,retain)    CLLocation *userLocation ;
+@property (nonatomic,strong)    CLLocation *userLocation ;
 
 -(void)drawRect:(CGRect)rect ; 
 

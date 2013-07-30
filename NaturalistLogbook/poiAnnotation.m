@@ -11,7 +11,7 @@
 
 @implementation poiAnnotation
 
-@synthesize coordinate ; 
+@synthesize coordinate,title ; 
 
 - (void) setCoordinate:(CLLocationCoordinate2D)coord {
     coordinate = coord ; 

@@ -95,7 +95,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180; }
 
 -(void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    [self setHeading: [[change objectForKey:NSKeyValueChangeNewKey]doubleValue]] ;
+    [self setHeading: [change[NSKeyValueChangeNewKey]doubleValue]] ;
     [self setNeedsDisplay] ; 
 }
 

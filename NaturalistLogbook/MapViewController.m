@@ -10,7 +10,11 @@
 #import "WildcardGestureRecognizer.h"
 #import "poiAnnotation.h"
 
+
 @implementation MapViewController
+
+@synthesize infoButton ;
+@synthesize pv ;
 @synthesize mapView, mapAnnotations, locateButton, toolbar ,cameraButton, uiaiv ,userLocation, userHeading, userView , whenHit, poi;
 
 
@@ -21,17 +25,15 @@
     [mapView setMapType:MKMapTypeHybrid ] ;
     [self startLocationStandardUpdates ] ; 
     
-    [self setWhenHit:0.0f ];
+    UILongPressGestureRecognizer *lpgr = [[UILongPressGestureRecognizer alloc] 
+                                          initWithTarget:self action:@selector(handleLongPress:)];
+    lpgr.minimumPressDuration = 2.0; //user needs to press for 2 seconds
+    [self.mapView addGestureRecognizer:lpgr];
+    //
+    UITapGestureRecognizer *tgr = [[UITapGestureRecognizer alloc] 
+                                   initWithTarget:self action:@selector(handleTap:)];
+    [self.mapView addGestureRecognizer:tgr];
     
-   
-    WildcardGestureRecognizer * tapInterceptor = [[[WildcardGestureRecognizer alloc] init] autorelease] ;
-    tapInterceptor.touchesBeganCallback = ^(NSSet * touches, UIEvent * event) {
-        [self handleTouchBegan:touches ];
-    };
-    tapInterceptor.touchesEndedCallback = ^(NSSet * touches, UIEvent * event) {
-        [self handleTouchEnded:touches ];
-    };
-    [mapView addGestureRecognizer:tapInterceptor];
 }
 - (void) viewDidAppear:(BOOL)animated
 {
@@ -58,24 +60,20 @@
 
 - (void)viewDidUnload
 {
-    [uiaiv release];
     uiaiv = nil;
     
+    infoButton = nil;
     [super viewDidUnload];
-
+    
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
-    [userView release];
 }
 
 
 - (void)dealloc
 {
-    [uiaiv release];
-    [locationManager release ] ; 
-    [userView release ];
+     ; 
     
-    [super dealloc];
 }
 
 - (IBAction)locateUser:(id)sender
@@ -98,10 +96,18 @@
             if (uipc!=nil) {
                 [uipc setCameraCaptureMode: UIImagePickerControllerCameraCaptureModePhoto] ;
                 
-                [self presentModalViewController:uipc animated:TRUE ] ;
+                //[self presentModalViewController:uipc animated:TRUE ] ;
+                ///TODO:
+                [self presentViewController:uipc animated:TRUE completion:NULL ] ;
             }
         }
     } 
+}
+
+- (IBAction)pinButtonPressed:(id)sender {
+}
+
+- (IBAction)infoButtonPressed:(id)sender {
 }
 - (void)startLocationStandardUpdates
 {
@@ -112,12 +118,12 @@
     
     [locationManager setDelegate:self];
     [locationManager setDesiredAccuracy: kCLLocationAccuracyBest];
-    
+    //
     [locationManager setHeadingOrientation:CLDeviceOrientationFaceUp] ; 
     // Set a movement threshold for new events.
-    [locationManager setDistanceFilter:kCLDistanceFilterNone ] ;
-    [locationManager setHeadingFilter:kCLHeadingFilterNone] ;
-    
+    [locationManager setDistanceFilter:2.0f ] ;
+    [locationManager setHeadingFilter:2.0f] ;
+    //
     [locationManager startUpdatingLocation];
     [locationManager startUpdatingHeading] ;
 }
@@ -128,16 +134,16 @@
     
     userPosition = CLLocationCoordinate2DMake(newLocation.coordinate.latitude, newLocation.coordinate.longitude);
     
-   /* // If it's a relatively recent event, turn off updates to save power
-    NSDate* eventDate = newLocation.timestamp;
-    NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
-    if (abs(howRecent) < 15.0)
-    {
-        NSLog(@"latitude %+.6f, longitude %+.6f\n",
-              newLocation.coordinate.latitude,
-              newLocation.coordinate.longitude);
-    }
-    */
+    /* // If it's a relatively recent event, turn off updates to save power
+     NSDate* eventDate = newLocation.timestamp;
+     NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
+     if (abs(howRecent) < 15.0)
+     {
+     NSLog(@"latitude %+.6f, longitude %+.6f\n",
+     newLocation.coordinate.latitude,
+     newLocation.coordinate.longitude);
+     }
+     */
     // else skip the event and process the next one.
 }
 
@@ -169,69 +175,56 @@
     if ([annotation isKindOfClass:[MKUserLocation class]])
     {
         if (userView == nil) {
-            userView=[[[UserLocationView alloc] 
-                       initWithAnnotation:annotation reuseIdentifier:@"user"]
-                      autorelease];
+            userView=[[UserLocationView alloc] 
+                       initWithAnnotation:annotation reuseIdentifier:@"user"];
             [userView setUserLocation: userLocation ] ; 
         }
         
         [self addObserver:userView forKeyPath:@"userHeading" options:NSKeyValueObservingOptionNew context:NULL] ; 
         
         return userView ; 
-    }
-        
+    } else 
+        if ([annotation isKindOfClass:[poiAnnotation class]])
+        {
+            if (pv == nil) {
+                pv = [[poiView alloc ] initWithAnnotation:annotation reuseIdentifier:@"poi"];
+            }
+            return pv ; 
+        }
+    
     return nil;
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
-    [self dismissModalViewControllerAnimated:TRUE] ;
+    [self dismissViewControllerAnimated:TRUE completion:NULL] ; 
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     NSLog(@"didFinishPickingMediaWithInfo") ;
 }
 
-- (void) handleTouchBegan: (NSSet *) touches {
-    
-    if ([touches count] == 1 ) 
-    {
-         NSLog(@"handleTouchBegan");
-        [self setWhenHit:[(UITouch*)[touches anyObject] timestamp ]];
-        CGPoint where = [[touches anyObject] locationInView:mapView] ;
-        CLLocationCoordinate2D coord2D = [mapView convertPoint:where toCoordinateFromView:mapView] ;
-        [self setPoi:[[poiAnnotation alloc] init] ];
-        [poi setCoordinate:coord2D] ;
-
-        UIAlertView *av = [[UIAlertView alloc ]initWithTitle:@"pin creation" message:@"Do you want to drop a pin" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok",nil ];
-        [av show];
-    }
-}
--(void) handleTouchEnded:(NSSet *) touches {
-    
-//    NSTimeInterval now = [(UITouch*)[touches anyObject] timestamp ];
-//    
-//    if ([touches count] == 1 && now - whenHit > 3.0f ) 
-//    {
-//        NSLog(@"handleTouchEnded");
-//        [self setWhenHit:0.0f];
-//        
-//        CGPoint where = [[touches anyObject] locationInView:mapView] ;
-//        CLLocationCoordinate2D coord2D = [mapView convertPoint:where toCoordinateFromView:mapView] ;
-//        [self setPoi:[[poiAnnotation alloc] init]];
-//        [poi setCoordinate:coord2D] ;
-//        
-//        [mapView addAnnotation: poi];
-//    }
-}
-
-- (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex
+- (void)handleLongPress:(UIGestureRecognizer *)gestureRecognizer
 {
-    if (buttonIndex > 0) {
-                
-        [mapView addAnnotation: [self poi]];
-        [[self poi]release];
-        poi = nil;
-    }
+    if (gestureRecognizer.state == UIGestureRecognizerStateBegan)
+        return;
+    
+    CGPoint where = [gestureRecognizer locationInView:self.mapView];   
+    CLLocationCoordinate2D coord2D = [mapView convertPoint:where toCoordinateFromView:mapView] ;
+    [self setPoi:[[poiAnnotation alloc] init]];
+    [poi setCoordinate:coord2D] ;
+    [self.mapView addAnnotation:poi];
+}
+
+- (void)handleTap:(UITapGestureRecognizer *)sender 
+{     
+    if (sender.state == UIGestureRecognizerStateEnded)
+    {             
+    } 
+}
+
+- (void) mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
+{
+    
 }
 
 @end

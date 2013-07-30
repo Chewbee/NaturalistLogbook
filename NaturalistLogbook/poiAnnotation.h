@@ -13,8 +13,10 @@
 
 @interface poiAnnotation : NSObject <MKAnnotation >{
     CLLocationCoordinate2D coordinate ;
+    NSString *title ; 
 }
 
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate ; 
+@property (nonatomic,copy) NSString *title ; 
 
 @end

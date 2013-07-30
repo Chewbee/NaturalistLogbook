@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E6016EA013F9ADB3005B5542 /* poi.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6016E9F13F9ADB3005B5542 /* poi.xib */; };
+		E6016EA313F9B141005B5542 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = E6016EA213F9B141005B5542 /* menu.png */; };
+		E6016EA613F9B1D8005B5542 /* poiView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6016EA513F9B1D8005B5542 /* poiView.m */; };
+		E6016EB213F9C4D1005B5542 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6016EB113F9C4D1005B5542 /* CoreData.framework */; };
+		E6016EB513F9C631005B5542 /* dataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E6016EB313F9C631005B5542 /* dataModel.xcdatamodeld */; };
 		E64B30F813E9EBFA00FA1857 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64B30F713E9EBFA00FA1857 /* UIKit.framework */; };
 		E64B30FA13E9EBFA00FA1857 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64B30F913E9EBFA00FA1857 /* Foundation.framework */; };
 		E64B30FC13E9EBFA00FA1857 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64B30FB13E9EBFA00FA1857 /* CoreGraphics.framework */; };
@@ -36,6 +41,7 @@
 		E64B315D13EC377200FA1857 /* 71-compass.png in Resources */ = {isa = PBXBuildFile; fileRef = E64B315C13EC377200FA1857 /* 71-compass.png */; };
 		E64B316013EC458200FA1857 /* MKMapView+Draw.m in Sources */ = {isa = PBXBuildFile; fileRef = E64B315F13EC458200FA1857 /* MKMapView+Draw.m */; };
 		E64B316B13EC9E3B00FA1857 /* UserLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = E64B316A13EC9E3B00FA1857 /* UserLocationView.m */; };
+		E6974EF417A807030051589A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E6974EF317A807030051589A /* Default-568h@2x.png */; };
 		E6C4894A13F85D9500D3FE8D /* WildcardGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C4894913F85D9500D3FE8D /* WildcardGestureRecognizer.m */; };
 		E6C4894D13F86C7800D3FE8D /* poiAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C4894C13F86C7800D3FE8D /* poiAnnotation.m */; };
 /* End PBXBuildFile section */
@@ -51,6 +57,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E6016E9F13F9ADB3005B5542 /* poi.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = poi.xib; sourceTree = "<group>"; };
+		E6016EA213F9B141005B5542 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		E6016EA413F9B1D8005B5542 /* poiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = poiView.h; sourceTree = "<group>"; };
+		E6016EA513F9B1D8005B5542 /* poiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = poiView.m; sourceTree = "<group>"; };
+		E6016EB113F9C4D1005B5542 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E6016EB413F9C631005B5542 /* dataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = dataModel.xcdatamodel; sourceTree = "<group>"; };
 		E64B30F313E9EBFA00FA1857 /* NaturalistLogbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaturalistLogbook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E64B30F713E9EBFA00FA1857 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E64B30F913E9EBFA00FA1857 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -88,6 +100,7 @@
 		E64B315F13EC458200FA1857 /* MKMapView+Draw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+Draw.m"; sourceTree = "<group>"; };
 		E64B316913EC9E3B00FA1857 /* UserLocationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLocationView.h; sourceTree = "<group>"; };
 		E64B316A13EC9E3B00FA1857 /* UserLocationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLocationView.m; sourceTree = "<group>"; };
+		E6974EF317A807030051589A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		E6C4894813F85D9500D3FE8D /* WildcardGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WildcardGestureRecognizer.h; sourceTree = "<group>"; };
 		E6C4894913F85D9500D3FE8D /* WildcardGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WildcardGestureRecognizer.m; sourceTree = "<group>"; };
 		E6C4894B13F86C7800D3FE8D /* poiAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = poiAnnotation.h; sourceTree = "<group>"; };
@@ -99,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6016EB213F9C4D1005B5542 /* CoreData.framework in Frameworks */,
 				E64B30F813E9EBFA00FA1857 /* UIKit.framework in Frameworks */,
 				E64B30FA13E9EBFA00FA1857 /* Foundation.framework in Frameworks */,
 				E64B30FC13E9EBFA00FA1857 /* CoreGraphics.framework in Frameworks */,
@@ -123,6 +137,7 @@
 		E64B30E813E9EBFA00FA1857 = {
 			isa = PBXGroup;
 			children = (
+				E6974EF317A807030051589A /* Default-568h@2x.png */,
 				E64B314513EAE0B000FA1857 /* Resources */,
 				E64B30FD13E9EBFA00FA1857 /* NaturalistLogbook */,
 				E64B312313E9EBFB00FA1857 /* NaturalistLogbookTests */,
@@ -143,6 +158,7 @@
 		E64B30F613E9EBFA00FA1857 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E6016EB113F9C4D1005B5542 /* CoreData.framework */,
 				E64B314013E9FAB000FA1857 /* CoreLocation.framework */,
 				E64B313E13E9FAA000FA1857 /* MapKit.framework */,
 				E64B30F713E9EBFA00FA1857 /* UIKit.framework */,
@@ -155,6 +171,8 @@
 		E64B30FD13E9EBFA00FA1857 /* NaturalistLogbook */ = {
 			isa = PBXGroup;
 			children = (
+				E6016EA413F9B1D8005B5542 /* poiView.h */,
+				E6016EA513F9B1D8005B5542 /* poiView.m */,
 				E6C4894B13F86C7800D3FE8D /* poiAnnotation.h */,
 				E6C4894C13F86C7800D3FE8D /* poiAnnotation.m */,
 				E6C4894813F85D9500D3FE8D /* WildcardGestureRecognizer.h */,
@@ -208,6 +226,7 @@
 		E64B314513EAE0B000FA1857 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E6016EA213F9B141005B5542 /* menu.png */,
 				E64B315C13EC377200FA1857 /* 71-compass.png */,
 				E64B315613EB514100FA1857 /* 68-paperclip.png */,
 				E64B315713EB514100FA1857 /* 72-pin.png */,
@@ -219,6 +238,8 @@
 				E64B311513E9EBFB00FA1857 /* SecondView.xib */,
 				E64B314213EADFF700FA1857 /* MapViewController.xib */,
 				E64B310913E9EBFA00FA1857 /* MainWindow.xib */,
+				E6016E9F13F9ADB3005B5542 /* poi.xib */,
+				E6016EB313F9C631005B5542 /* dataModel.xcdatamodeld */,
 			);
 			name = Resources;
 			path = NaturalistLogbook;
@@ -268,6 +289,9 @@
 /* Begin PBXProject section */
 		E64B30EA13E9EBFA00FA1857 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
 			buildConfigurationList = E64B30ED13E9EBFA00FA1857 /* Build configuration list for PBXProject "NaturalistLogbook" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -303,6 +327,9 @@
 				E64B315A13EB514100FA1857 /* 72-pin.png in Resources */,
 				E64B315B13EB514100FA1857 /* 95-equalizer.png in Resources */,
 				E64B315D13EC377200FA1857 /* 71-compass.png in Resources */,
+				E6016EA013F9ADB3005B5542 /* poi.xib in Resources */,
+				E6016EA313F9B141005B5542 /* menu.png in Resources */,
+				E6974EF417A807030051589A /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +373,8 @@
 				E64B316B13EC9E3B00FA1857 /* UserLocationView.m in Sources */,
 				E6C4894A13F85D9500D3FE8D /* WildcardGestureRecognizer.m in Sources */,
 				E6C4894D13F86C7800D3FE8D /* poiAnnotation.m in Sources */,
+				E6016EA613F9B1D8005B5542 /* poiView.m in Sources */,
+				E6016EB513F9C631005B5542 /* dataModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,7 +444,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -425,7 +454,8 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=*]" = "";
 				SDKROOT = iphoneos;
 			};
@@ -435,13 +465,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -453,12 +483,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NaturalistLogbook/NaturalistLogbook-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "NaturalistLogbook/NaturalistLogbook-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -467,11 +501,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NaturalistLogbook/NaturalistLogbook-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "NaturalistLogbook/NaturalistLogbook-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -482,12 +520,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NaturalistLogbook.app/NaturalistLogbook";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NaturalistLogbookTests/NaturalistLogbookTests-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "NaturalistLogbookTests/NaturalistLogbookTests-Info.plist";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -504,12 +544,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NaturalistLogbook.app/NaturalistLogbook";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NaturalistLogbookTests/NaturalistLogbookTests-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "NaturalistLogbookTests/NaturalistLogbookTests-Info.plist";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -552,6 +594,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E6016EB313F9C631005B5542 /* dataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E6016EB413F9C631005B5542 /* dataModel.xcdatamodel */,
+			);
+			currentVersion = E6016EB413F9C631005B5542 /* dataModel.xcdatamodel */;
+			path = dataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E64B30EA13E9EBFA00FA1857 /* Project object */;
 }

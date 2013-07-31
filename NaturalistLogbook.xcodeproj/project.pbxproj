@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E6009A0317A959D40053AC26 /* MapDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6009A0217A959D40053AC26 /* MapDetailsViewController.m */; };
 		E6016EA013F9ADB3005B5542 /* poi.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6016E9F13F9ADB3005B5542 /* poi.xib */; };
 		E6016EA313F9B141005B5542 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = E6016EA213F9B141005B5542 /* menu.png */; };
 		E6016EA613F9B1D8005B5542 /* poiView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6016EA513F9B1D8005B5542 /* poiView.m */; };
 		E6016EB213F9C4D1005B5542 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6016EB113F9C4D1005B5542 /* CoreData.framework */; };
 		E6016EB513F9C631005B5542 /* dataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E6016EB313F9C631005B5542 /* dataModel.xcdatamodeld */; };
+		E60BD14C17A9B43C003F5FA3 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60BD14B17A9B43C003F5FA3 /* AssetsLibrary.framework */; };
 		E64B30F813E9EBFA00FA1857 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64B30F713E9EBFA00FA1857 /* UIKit.framework */; };
 		E64B30FA13E9EBFA00FA1857 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64B30F913E9EBFA00FA1857 /* Foundation.framework */; };
 		E64B30FC13E9EBFA00FA1857 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64B30FB13E9EBFA00FA1857 /* CoreGraphics.framework */; };
@@ -21,7 +23,6 @@
 		E64B310B13E9EBFA00FA1857 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64B310913E9EBFA00FA1857 /* MainWindow.xib */; };
 		E64B310E13E9EBFB00FA1857 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64B310D13E9EBFB00FA1857 /* MapViewController.m */; };
 		E64B311113E9EBFB00FA1857 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64B311013E9EBFB00FA1857 /* SecondViewController.m */; };
-		E64B311713E9EBFB00FA1857 /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64B311513E9EBFB00FA1857 /* SecondView.xib */; };
 		E64B311E13E9EBFB00FA1857 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64B30F713E9EBFA00FA1857 /* UIKit.framework */; };
 		E64B311F13E9EBFB00FA1857 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64B30F913E9EBFA00FA1857 /* Foundation.framework */; };
 		E64B312013E9EBFB00FA1857 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64B30FB13E9EBFA00FA1857 /* CoreGraphics.framework */; };
@@ -42,6 +43,7 @@
 		E64B316013EC458200FA1857 /* MKMapView+Draw.m in Sources */ = {isa = PBXBuildFile; fileRef = E64B315F13EC458200FA1857 /* MKMapView+Draw.m */; };
 		E64B316B13EC9E3B00FA1857 /* UserLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = E64B316A13EC9E3B00FA1857 /* UserLocationView.m */; };
 		E6974EF417A807030051589A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E6974EF317A807030051589A /* Default-568h@2x.png */; };
+		E6974EF617A817BA0051589A /* NaturalistHandbook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6974EF517A817BA0051589A /* NaturalistHandbook.storyboard */; };
 		E6C4894A13F85D9500D3FE8D /* WildcardGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C4894913F85D9500D3FE8D /* WildcardGestureRecognizer.m */; };
 		E6C4894D13F86C7800D3FE8D /* poiAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C4894C13F86C7800D3FE8D /* poiAnnotation.m */; };
 /* End PBXBuildFile section */
@@ -57,12 +59,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E6009A0117A959D40053AC26 /* MapDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapDetailsViewController.h; sourceTree = "<group>"; };
+		E6009A0217A959D40053AC26 /* MapDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapDetailsViewController.m; sourceTree = "<group>"; };
 		E6016E9F13F9ADB3005B5542 /* poi.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = poi.xib; sourceTree = "<group>"; };
 		E6016EA213F9B141005B5542 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		E6016EA413F9B1D8005B5542 /* poiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = poiView.h; sourceTree = "<group>"; };
 		E6016EA513F9B1D8005B5542 /* poiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = poiView.m; sourceTree = "<group>"; };
 		E6016EB113F9C4D1005B5542 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		E6016EB413F9C631005B5542 /* dataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = dataModel.xcdatamodel; sourceTree = "<group>"; };
+		E60BD14B17A9B43C003F5FA3 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		E64B30F313E9EBFA00FA1857 /* NaturalistLogbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaturalistLogbook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E64B30F713E9EBFA00FA1857 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E64B30F913E9EBFA00FA1857 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -78,7 +83,6 @@
 		E64B310D13E9EBFB00FA1857 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		E64B310F13E9EBFB00FA1857 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		E64B311013E9EBFB00FA1857 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		E64B311613E9EBFB00FA1857 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondView.xib; sourceTree = "<group>"; };
 		E64B311D13E9EBFB00FA1857 /* NaturalistLogbookTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NaturalistLogbookTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E64B312513E9EBFB00FA1857 /* NaturalistLogbookTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NaturalistLogbookTests-Info.plist"; sourceTree = "<group>"; };
 		E64B312713E9EBFB00FA1857 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 		E64B316913EC9E3B00FA1857 /* UserLocationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLocationView.h; sourceTree = "<group>"; };
 		E64B316A13EC9E3B00FA1857 /* UserLocationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLocationView.m; sourceTree = "<group>"; };
 		E6974EF317A807030051589A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		E6974EF517A817BA0051589A /* NaturalistHandbook.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NaturalistHandbook.storyboard; sourceTree = "<group>"; };
 		E6C4894813F85D9500D3FE8D /* WildcardGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WildcardGestureRecognizer.h; sourceTree = "<group>"; };
 		E6C4894913F85D9500D3FE8D /* WildcardGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WildcardGestureRecognizer.m; sourceTree = "<group>"; };
 		E6C4894B13F86C7800D3FE8D /* poiAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = poiAnnotation.h; sourceTree = "<group>"; };
@@ -112,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E60BD14C17A9B43C003F5FA3 /* AssetsLibrary.framework in Frameworks */,
 				E6016EB213F9C4D1005B5542 /* CoreData.framework in Frameworks */,
 				E64B30F813E9EBFA00FA1857 /* UIKit.framework in Frameworks */,
 				E64B30FA13E9EBFA00FA1857 /* Foundation.framework in Frameworks */,
@@ -137,6 +143,8 @@
 		E64B30E813E9EBFA00FA1857 = {
 			isa = PBXGroup;
 			children = (
+				E60BD14B17A9B43C003F5FA3 /* AssetsLibrary.framework */,
+				E6974EF517A817BA0051589A /* NaturalistHandbook.storyboard */,
 				E6974EF317A807030051589A /* Default-568h@2x.png */,
 				E64B314513EAE0B000FA1857 /* Resources */,
 				E64B30FD13E9EBFA00FA1857 /* NaturalistLogbook */,
@@ -171,6 +179,8 @@
 		E64B30FD13E9EBFA00FA1857 /* NaturalistLogbook */ = {
 			isa = PBXGroup;
 			children = (
+				E6009A0117A959D40053AC26 /* MapDetailsViewController.h */,
+				E6009A0217A959D40053AC26 /* MapDetailsViewController.m */,
 				E6016EA413F9B1D8005B5542 /* poiView.h */,
 				E6016EA513F9B1D8005B5542 /* poiView.m */,
 				E6C4894B13F86C7800D3FE8D /* poiAnnotation.h */,
@@ -235,7 +245,6 @@
 				E64B315213EB4FAA00FA1857 /* 20-gear2.png */,
 				E64B315013EB4F4200FA1857 /* 103-map.png */,
 				E64B314E13EB4DAF00FA1857 /* 74-location.png */,
-				E64B311513E9EBFB00FA1857 /* SecondView.xib */,
 				E64B314213EADFF700FA1857 /* MapViewController.xib */,
 				E64B310913E9EBFA00FA1857 /* MainWindow.xib */,
 				E6016E9F13F9ADB3005B5542 /* poi.xib */,
@@ -317,7 +326,6 @@
 			files = (
 				E64B310213E9EBFA00FA1857 /* InfoPlist.strings in Resources */,
 				E64B310B13E9EBFA00FA1857 /* MainWindow.xib in Resources */,
-				E64B311713E9EBFB00FA1857 /* SecondView.xib in Resources */,
 				E64B314413EADFF700FA1857 /* MapViewController.xib in Resources */,
 				E64B314F13EB4DAF00FA1857 /* 74-location.png in Resources */,
 				E64B315113EB4F4200FA1857 /* 103-map.png in Resources */,
@@ -330,6 +338,7 @@
 				E6016EA013F9ADB3005B5542 /* poi.xib in Resources */,
 				E6016EA313F9B141005B5542 /* menu.png in Resources */,
 				E6974EF417A807030051589A /* Default-568h@2x.png in Resources */,
+				E6974EF617A817BA0051589A /* NaturalistHandbook.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +384,7 @@
 				E6C4894D13F86C7800D3FE8D /* poiAnnotation.m in Sources */,
 				E6016EA613F9B1D8005B5542 /* poiView.m in Sources */,
 				E6016EB513F9C631005B5542 /* dataModel.xcdatamodeld in Sources */,
+				E6009A0317A959D40053AC26 /* MapDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,14 +423,6 @@
 			name = MainWindow.xib;
 			sourceTree = "<group>";
 		};
-		E64B311513E9EBFB00FA1857 /* SecondView.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E64B311613E9EBFB00FA1857 /* en */,
-			);
-			name = SecondView.xib;
-			sourceTree = "<group>";
-		};
 		E64B312613E9EBFB00FA1857 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -454,7 +456,7 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=*]" = "";
 				SDKROOT = iphoneos;
@@ -471,7 +473,7 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -490,7 +492,7 @@
 				GCC_PREFIX_HEADER = "NaturalistLogbook/NaturalistLogbook-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "NaturalistLogbook/NaturalistLogbook-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -507,7 +509,7 @@
 				GCC_PREFIX_HEADER = "NaturalistLogbook/NaturalistLogbook-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "NaturalistLogbook/NaturalistLogbook-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;

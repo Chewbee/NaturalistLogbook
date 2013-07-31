@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="FOi-d3-j4k">
+    <dependencies>
+        <development version="4600" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Second View Controller - Details-->
+        <scene sceneID="tNQ-ye-TcS">
+            <objects>
+                <viewController id="HBb-M7-isa" customClass="SecondViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nL7-BR-QGi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Details" image="72-pin.png" id="EMw-oO-kCt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yAb-DZ-H6H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="295" y="239"/>
+        </scene>
+        <!--Map Details View Controller-->
+        <scene sceneID="DrG-Nm-1t5">
+            <objects>
+                <viewController id="mf1-RS-deo" customClass="MapDetailsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BA4-am-uWE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yCS-a0-6du" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="826" y="239"/>
+        </scene>
+        <!--View Controller - Item-->
+        <scene sceneID="QIu-GA-hP2">
+            <objects>
+                <viewController id="R5N-4Y-xRa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZWE-wJ-n8V">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" image="20-gear2.png" id="QpG-Qh-YGn"/>
+                    <navigationItem key="navigationItem" id="9dR-g0-Mzl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0gy-P0-NxI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="301" y="861"/>
+        </scene>
+        <!--Map View Controller - Map-->
+        <scene sceneID="QuV-ps-Thy">
+            <objects>
+                <viewController id="oNj-Pq-nbx" customClass="MapViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pr6-vU-SRi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="WK4-uh-Q8a">
+                                <connections>
+                                    <outlet property="delegate" destination="oNj-Pq-nbx" id="zgf-eY-62G"/>
+                                </connections>
+                            </mapView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="S9Q-VB-wjJ">
+                                <items>
+                                    <barButtonItem image="74-location.png" id="MaV-On-FjE">
+                                        <connections>
+                                            <action selector="locateUser:" destination="oNj-Pq-nbx" id="hP8-Ju-nCt"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem image="86-camera.png" id="fGz-bc-QlQ">
+                                        <connections>
+                                            <segue destination="RG4-jo-Wfr" kind="modal" identifier="photo" id="YaU-LL-jqo"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem image="68-paperclip.png" id="gOy-9W-kw3">
+                                        <connections>
+                                            <segue destination="mf1-RS-deo" kind="modal" id="uKo-rP-ceV"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Jgu-NH-8id"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="S9Q-VB-wjJ" firstAttribute="trailing" secondItem="pr6-vU-SRi" secondAttribute="trailing" type="default" id="1SV-Kl-iJg"/>
+                            <constraint firstItem="WK4-uh-Q8a" firstAttribute="leading" secondItem="pr6-vU-SRi" secondAttribute="leading" type="default" id="2oK-9g-snY"/>
+                            <constraint firstAttribute="trailing" secondItem="Jgu-NH-8id" secondAttribute="trailing" constant="10" id="Ahn-Jq-Q8L"/>
+                            <constraint firstItem="WK4-uh-Q8a" firstAttribute="bottom" secondItem="pr6-vU-SRi" secondAttribute="bottom" type="default" id="KzZ-yM-MHt"/>
+                            <constraint firstItem="WK4-uh-Q8a" firstAttribute="top" secondItem="S9Q-VB-wjJ" secondAttribute="bottom" type="default" id="L7e-x4-raV"/>
+                            <constraint firstItem="WK4-uh-Q8a" firstAttribute="trailing" secondItem="pr6-vU-SRi" secondAttribute="trailing" type="default" id="XoW-H1-vBo"/>
+                            <constraint firstItem="S9Q-VB-wjJ" firstAttribute="leading" secondItem="pr6-vU-SRi" secondAttribute="leading" type="default" id="ffg-Fi-p4h"/>
+                            <constraint firstItem="S9Q-VB-wjJ" firstAttribute="top" secondItem="pr6-vU-SRi" secondAttribute="top" type="default" id="mWm-MA-iPx"/>
+                            <constraint firstItem="Jgu-NH-8id" firstAttribute="top" secondItem="pr6-vU-SRi" secondAttribute="top" constant="3" id="u0Y-ie-r7e"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="103-map.png" id="lct-RB-6GV"/>
+                    <connections>
+                        <outlet property="cameraButton" destination="fGz-bc-QlQ" id="6fU-Pk-7yo"/>
+                        <outlet property="locateButton" destination="MaV-On-FjE" id="NEV-eg-HDs"/>
+                        <outlet property="mapView" destination="WK4-uh-Q8a" id="AZz-Bo-iNx"/>
+                        <outlet property="toolbar" destination="S9Q-VB-wjJ" id="Tzc-DR-TGY"/>
+                        <outlet property="uiaiv" destination="Jgu-NH-8id" id="tbY-Oz-Skv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KOZ-rr-DtX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="301" y="-326"/>
+        </scene>
+        <!--Image Picker Controller - Back-->
+        <scene sceneID="NnB-4i-HAF">
+            <objects>
+                <viewController id="RG4-jo-Wfr" customClass="UIImagePickerController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6nt-2B-bkH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Back" prompt="To go back" id="dqj-Cv-eq8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wbY-q9-pPH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="826" y="-326"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="jtY-8y-CJf">
+            <objects>
+                <tabBarController wantsFullScreenLayout="YES" definesPresentationContext="YES" id="FOi-d3-j4k" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="f3u-N5-nrE"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="hmM-ke-CTM">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <outlet property="delegate" destination="PdD-4j-P3m" id="bJc-xe-PoD"/>
+                        <segue destination="oNj-Pq-nbx" kind="relationship" relationship="viewControllers" id="4td-3z-2tY"/>
+                        <segue destination="HBb-M7-isa" kind="relationship" relationship="viewControllers" id="Bow-9D-tla"/>
+                        <segue destination="R5N-4Y-xRa" kind="relationship" relationship="viewControllers" id="TE5-7x-RMX"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eQB-JQ-BnC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="PdD-4j-P3m" customClass="NaturalistLogbookAppDelegate">
+                    <connections>
+                        <outlet property="tabBarController" destination="FOi-d3-j4k" id="K9o-SL-Itx"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="-263" y="239"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="103-map.png" width="26" height="21"/>
+        <image name="20-gear2.png" width="26" height="28"/>
+        <image name="68-paperclip.png" width="14" height="26"/>
+        <image name="72-pin.png" width="10" height="20"/>
+        <image name="74-location.png" width="20" height="20"/>
+        <image name="86-camera.png" width="24" height="18"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

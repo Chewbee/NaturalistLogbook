@@ -10,7 +10,6 @@
 #import "WildcardGestureRecognizer.h"
 #import "poiAnnotation.h"
 
-
 @implementation MapViewController
 
 @synthesize infoButton ;
@@ -23,6 +22,7 @@
 {
     [super viewDidLoad] ;
     [mapView setMapType:MKMapTypeHybrid ] ;
+    
     [self startLocationStandardUpdates ] ; 
     
     UILongPressGestureRecognizer *lpgr = [[UILongPressGestureRecognizer alloc] 
@@ -70,45 +70,17 @@
 }
 
 
-- (void)dealloc
-{
-     ; 
-    
-}
 
+//
 - (IBAction)locateUser:(id)sender
 {
+    [mapView setUserTrackingMode:MKUserTrackingModeFollow animated:TRUE ];
     [mapView setCenterCoordinate: userPosition animated:TRUE] ;
-    
+    [mapView showsUserLocation] ; 
     MKCoordinateRegion region =  MKCoordinateRegionMakeWithDistance(userPosition , 100.0f, 100.0f);
     [mapView setRegion:region animated:TRUE];
 }
-- (IBAction)triggerCamera:(id)sender {
-    if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera ] ) {
-        
-        NSArray *availableMedia ; 
-        availableMedia = [UIImagePickerController availableMediaTypesForSourceType: UIImagePickerControllerSourceTypeCamera ] ; 
-        
-        if([UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceRear]){
-            
-            
-            UIImagePickerController *uipc = [[UIImagePickerController alloc ]init] ;
-            if (uipc!=nil) {
-                [uipc setCameraCaptureMode: UIImagePickerControllerCameraCaptureModePhoto] ;
-                
-                //[self presentModalViewController:uipc animated:TRUE ] ;
-                ///TODO:
-                [self presentViewController:uipc animated:TRUE completion:NULL ] ;
-            }
-        }
-    } 
-}
-
-- (IBAction)pinButtonPressed:(id)sender {
-}
-
-- (IBAction)infoButtonPressed:(id)sender {
-}
+//
 - (void)startLocationStandardUpdates
 {
     // Create the location manager if this object does not
@@ -169,8 +141,31 @@
 {
     [uiaiv stopAnimating] ;
 }
-
-- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
+-(void) mapViewDidFailLoadingMap:(MKMapView *)mapView withError:(NSError *)error
+{
+    UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:[error localizedDescription]
+                                                         message:[error localizedFailureReason]
+                                                        delegate:nil
+                                               cancelButtonTitle:@"OK"
+                                               otherButtonTitles:nil];
+    [errorAlert show];
+    [uiaiv stopAnimating] ;
+}
+//
+- (void)mapView:(MKMapView *)mapView didChangeUserTrackingMode:(MKUserTrackingMode)mode animated:(BOOL)animated
+{
+    
+}
+//
+- (MKAnnotationView *) dequeueReusableAnnotationViewWithIdentifier:(NSString *)identifier
+{
+    if (userView != nil && [identifier isEqualToString: @"user"] ) {
+        return userView ;
+    }
+    return nil ;
+}
+//
+- (MKAnnotationView *) mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
 {
     if ([annotation isKindOfClass:[MKUserLocation class]])
     {
@@ -196,19 +191,37 @@
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
-    [self dismissViewControllerAnimated:TRUE completion:NULL] ; 
+
 }
 
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    NSLog(@"didFinishPickingMediaWithInfo") ;
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    
+    UIImage    *im = [info valueForKey: UIImagePickerControllerOriginalImage ]  ;
+    CGImageRef cim = [im CGImage] ;
+    
+
+    ALAssetsLibraryWriteImageCompletionBlock completionBlock = ^(NSURL *assetURL, NSError *error)
+    {
+        if (error)
+        {
+            NSLog(@"Error %@ : %@ ", error.localizedDescription, error.localizedFailureReason) ;
+        }
+        else NSLog(@" %@ ",assetURL.absoluteString);
+    };
+
+    ALAssetsLibrary* library = [[ALAssetsLibrary alloc] init];
+    [library writeImageToSavedPhotosAlbum:cim orientation:[im imageOrientation] completionBlock:completionBlock ]  ;
+    // next line added or it stays
+    [picker dismissViewControllerAnimated:TRUE completion:nil] ;
 }
 
 - (void)handleLongPress:(UIGestureRecognizer *)gestureRecognizer
 {
     if (gestureRecognizer.state == UIGestureRecognizerStateBegan)
         return;
-    
-    CGPoint where = [gestureRecognizer locationInView:self.mapView];   
+
+    CGPoint where = [gestureRecognizer locationInView:self.mapView];
     CLLocationCoordinate2D coord2D = [mapView convertPoint:where toCoordinateFromView:mapView] ;
     [self setPoi:[[poiAnnotation alloc] init]];
     [poi setCoordinate:coord2D] ;
@@ -226,5 +239,21 @@
 {
     
 }
+//
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"photo"]) {
+        UIImagePickerController *uiipc = (UIImagePickerController*) segue.destinationViewController ;
 
+        [uiipc setDelegate: (id)self ];
+        
+        if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera] &&
+            [UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceRear]) {
+            [uiipc setSourceType:UIImagePickerControllerSourceTypeCamera] ;
+            [uiipc setCameraDevice:UIImagePickerControllerCameraDeviceRear];
+            [uiipc setCameraFlashMode:UIImagePickerControllerCameraFlashModeOff] ;
+            [uiipc setCameraCaptureMode:UIImagePickerControllerCameraCaptureModePhoto] ;
+        }
+    }
+}
 @end

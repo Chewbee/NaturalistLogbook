@@ -30,9 +30,16 @@
 {
     // Override point for customization after application launch.
     // Add the tab bar controller's current view as a subview of the window
-    self.window.rootViewController = self.tabBarController;
+  /*  self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;
+
+    UITabBarController *rootNavigationController = (UITabBarController *)self.window.rootViewController;
+    MyViewController *myViewController = (MyViewController *)[rootNavigationController topViewController];
+    // Configure myViewController.
+   */ 
+   return YES;
+
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

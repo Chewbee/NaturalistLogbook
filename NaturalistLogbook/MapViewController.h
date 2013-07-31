@@ -8,54 +8,52 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import <AssetsLibrary/AssetsLibrary.h>
 #import "UserLocationView.h"
 #import "poiAnnotation.h"
 #import "poiView.h"
 
 
-@interface MapViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate,UIImagePickerControllerDelegate,UIAlertViewDelegate >{
+@interface MapViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate, UIImagePickerControllerDelegate, UIAlertViewDelegate >
+{
 
-    IBOutlet MKMapView *mapView;
-    NSMutableArray *mapAnnotations ;
+    IBOutlet MKMapView  *mapView;
+    NSMutableArray      *mapAnnotations ;
     
-    IBOutlet UIActivityIndicatorView *uiaiv;
-    IBOutlet UIButton *infoButton;
+    IBOutlet UIActivityIndicatorView    *uiaiv;
+    IBOutlet UIButton                   *infoButton;
    
-    IBOutlet UIToolbar *toolbar ; 
-    IBOutlet UIBarButtonItem *locateButton ;
-    IBOutlet UIBarButtonItem *cameraButton ;
+    IBOutlet UIToolbar                  *toolbar ;
+    IBOutlet UIBarButtonItem            *locateButton ;
+    IBOutlet UIBarButtonItem            *cameraButton ;
     
-    CLLocationManager *locationManager ; 
-    CLLocationCoordinate2D userPosition ; 
-    CLLocation *userLocation ; 
-    double  userHeading ; 
+    CLLocationManager                   *locationManager ;
+    CLLocationCoordinate2D              userPosition ;
+    CLLocation                          *userLocation ;
+    double                              userHeading ;
     
-    UserLocationView *userView ; 
-    poiView *pv ; 
+    UserLocationView                    *userView ;
+    poiView                             *pv ;
     
-    poiAnnotation *poi ; 
+    poiAnnotation                       *poi ; 
 }
 
 @property (nonatomic,strong) poiView *pv;
 @property (nonatomic,strong) poiAnnotation *poi ; 
 @property (nonatomic) NSTimeInterval whenHit ;
-@property (nonatomic,strong) UserLocationView *userView ;
-@property (nonatomic,strong) CLLocation *userLocation ; 
+@property (nonatomic, strong) UserLocationView *userView ;
+@property (nonatomic, strong) CLLocation *userLocation ; 
 @property (nonatomic) double userHeading ; 
 @property (nonatomic, strong) IBOutlet MKMapView *mapView;
 
 @property (nonatomic, strong) NSMutableArray *mapAnnotations;
-@property (nonatomic,strong) IBOutlet UIBarButtonItem *locateButton ;
-@property (nonatomic,strong) IBOutlet UIBarButtonItem *cameraButton ;
-@property (nonatomic,strong) IBOutlet UIToolbar *toolbar ; 
+@property (nonatomic, strong) IBOutlet UIBarButtonItem *locateButton ;
+@property (nonatomic, strong) IBOutlet UIBarButtonItem *cameraButton ;
+@property (nonatomic, strong) IBOutlet UIToolbar *toolbar ; 
 @property (nonatomic, strong ) IBOutlet UIActivityIndicatorView *uiaiv ;
 @property (nonatomic, strong) IBOutlet UIButton *infoButton ;
 
 - (IBAction)locateUser:(id)sender;
-- (IBAction)triggerCamera:(id)sender;
-
-- (IBAction)infoButtonPressed:(id)sender;
-
 - (void)startLocationStandardUpdates ; 
 
 @end

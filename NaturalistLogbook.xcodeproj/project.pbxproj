@@ -20,7 +20,6 @@
 		E64B310213E9EBFA00FA1857 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E64B310013E9EBFA00FA1857 /* InfoPlist.strings */; };
 		E64B310513E9EBFA00FA1857 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E64B310413E9EBFA00FA1857 /* main.m */; };
 		E64B310813E9EBFA00FA1857 /* NaturalistLogbookAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E64B310713E9EBFA00FA1857 /* NaturalistLogbookAppDelegate.m */; };
-		E64B310B13E9EBFA00FA1857 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64B310913E9EBFA00FA1857 /* MainWindow.xib */; };
 		E64B310E13E9EBFB00FA1857 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64B310D13E9EBFB00FA1857 /* MapViewController.m */; };
 		E64B311113E9EBFB00FA1857 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64B311013E9EBFB00FA1857 /* SecondViewController.m */; };
 		E64B311E13E9EBFB00FA1857 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64B30F713E9EBFA00FA1857 /* UIKit.framework */; };
@@ -31,7 +30,6 @@
 		E64B312D13E9EBFB00FA1857 /* NaturalistLogbookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E64B312C13E9EBFB00FA1857 /* NaturalistLogbookTests.m */; };
 		E64B313F13E9FAA000FA1857 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64B313E13E9FAA000FA1857 /* MapKit.framework */; };
 		E64B314113E9FAB000FA1857 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64B314013E9FAB000FA1857 /* CoreLocation.framework */; };
-		E64B314413EADFF700FA1857 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64B314213EADFF700FA1857 /* MapViewController.xib */; };
 		E64B314F13EB4DAF00FA1857 /* 74-location.png in Resources */ = {isa = PBXBuildFile; fileRef = E64B314E13EB4DAF00FA1857 /* 74-location.png */; };
 		E64B315113EB4F4200FA1857 /* 103-map.png in Resources */ = {isa = PBXBuildFile; fileRef = E64B315013EB4F4200FA1857 /* 103-map.png */; };
 		E64B315313EB4FAA00FA1857 /* 20-gear2.png in Resources */ = {isa = PBXBuildFile; fileRef = E64B315213EB4FAA00FA1857 /* 20-gear2.png */; };
@@ -42,8 +40,11 @@
 		E64B315D13EC377200FA1857 /* 71-compass.png in Resources */ = {isa = PBXBuildFile; fileRef = E64B315C13EC377200FA1857 /* 71-compass.png */; };
 		E64B316013EC458200FA1857 /* MKMapView+Draw.m in Sources */ = {isa = PBXBuildFile; fileRef = E64B315F13EC458200FA1857 /* MKMapView+Draw.m */; };
 		E64B316B13EC9E3B00FA1857 /* UserLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = E64B316A13EC9E3B00FA1857 /* UserLocationView.m */; };
+		E6578DAA17ABE7A900BEFEEA /* PhotoOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6578DA817ABE7A900BEFEEA /* PhotoOverlayViewController.m */; };
+		E6578DAC17AC03FF00BEFEEA /* NaturalistHandbook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6578DAE17AC03FF00BEFEEA /* NaturalistHandbook.storyboard */; };
+		E68353DF17AC09EB00E49FB0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E68353E117AC09EB00E49FB0 /* Localizable.strings */; };
+		E68353E517B1352B00E49FB0 /* PhotoOverlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E68353E717B1352B00E49FB0 /* PhotoOverlayViewController.xib */; };
 		E6974EF417A807030051589A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E6974EF317A807030051589A /* Default-568h@2x.png */; };
-		E6974EF617A817BA0051589A /* NaturalistHandbook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6974EF517A817BA0051589A /* NaturalistHandbook.storyboard */; };
 		E6C4894A13F85D9500D3FE8D /* WildcardGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C4894913F85D9500D3FE8D /* WildcardGestureRecognizer.m */; };
 		E6C4894D13F86C7800D3FE8D /* poiAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C4894C13F86C7800D3FE8D /* poiAnnotation.m */; };
 /* End PBXBuildFile section */
@@ -73,25 +74,21 @@
 		E64B30F913E9EBFA00FA1857 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E64B30FB13E9EBFA00FA1857 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		E64B30FF13E9EBFA00FA1857 /* NaturalistLogbook-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NaturalistLogbook-Info.plist"; sourceTree = "<group>"; };
-		E64B310113E9EBFA00FA1857 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E64B310313E9EBFA00FA1857 /* NaturalistLogbook-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NaturalistLogbook-Prefix.pch"; sourceTree = "<group>"; };
 		E64B310413E9EBFA00FA1857 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E64B310613E9EBFA00FA1857 /* NaturalistLogbookAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NaturalistLogbookAppDelegate.h; sourceTree = "<group>"; };
 		E64B310713E9EBFA00FA1857 /* NaturalistLogbookAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NaturalistLogbookAppDelegate.m; sourceTree = "<group>"; };
-		E64B310A13E9EBFA00FA1857 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		E64B310C13E9EBFA00FA1857 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		E64B310D13E9EBFB00FA1857 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		E64B310F13E9EBFB00FA1857 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		E64B311013E9EBFB00FA1857 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		E64B311D13E9EBFB00FA1857 /* NaturalistLogbookTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NaturalistLogbookTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E64B312513E9EBFB00FA1857 /* NaturalistLogbookTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NaturalistLogbookTests-Info.plist"; sourceTree = "<group>"; };
-		E64B312713E9EBFB00FA1857 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E64B312913E9EBFB00FA1857 /* NaturalistLogbookTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NaturalistLogbookTests-Prefix.pch"; sourceTree = "<group>"; };
 		E64B312A13E9EBFB00FA1857 /* NaturalistLogbookTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NaturalistLogbookTests.h; sourceTree = "<group>"; };
 		E64B312C13E9EBFB00FA1857 /* NaturalistLogbookTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NaturalistLogbookTests.m; sourceTree = "<group>"; };
 		E64B313E13E9FAA000FA1857 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E64B314013E9FAB000FA1857 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		E64B314313EADFF700FA1857 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MapViewController.xib; sourceTree = "<group>"; };
 		E64B314E13EB4DAF00FA1857 /* 74-location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "74-location.png"; sourceTree = "<group>"; };
 		E64B315013EB4F4200FA1857 /* 103-map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "103-map.png"; sourceTree = "<group>"; };
 		E64B315213EB4FAA00FA1857 /* 20-gear2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "20-gear2.png"; sourceTree = "<group>"; };
@@ -104,8 +101,19 @@
 		E64B315F13EC458200FA1857 /* MKMapView+Draw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+Draw.m"; sourceTree = "<group>"; };
 		E64B316913EC9E3B00FA1857 /* UserLocationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLocationView.h; sourceTree = "<group>"; };
 		E64B316A13EC9E3B00FA1857 /* UserLocationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLocationView.m; sourceTree = "<group>"; };
+		E6578DA717ABE7A900BEFEEA /* PhotoOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoOverlayViewController.h; sourceTree = "<group>"; };
+		E6578DA817ABE7A900BEFEEA /* PhotoOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoOverlayViewController.m; sourceTree = "<group>"; };
+		E6578DB117AC04E600BEFEEA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E6578DB217AC04E600BEFEEA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E6578DB417AC04FB00BEFEEA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E6578DB517AC04FB00BEFEEA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E6578DB717AC050B00BEFEEA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/NaturalistHandbook.storyboard; sourceTree = "<group>"; };
+		E68353E017AC09EB00E49FB0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E68353E217AC09F200E49FB0 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E68353E417B1343000E49FB0 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = fr; path = fr.lproj/NaturalistHandbook.storyboard; sourceTree = "<group>"; };
+		E68353E617B1352B00E49FB0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/PhotoOverlayViewController.xib; sourceTree = "<group>"; };
+		E68353E817B1353200E49FB0 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file; name = fr; path = fr.lproj/PhotoOverlayViewController.xib; sourceTree = "<group>"; };
 		E6974EF317A807030051589A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		E6974EF517A817BA0051589A /* NaturalistHandbook.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NaturalistHandbook.storyboard; sourceTree = "<group>"; };
 		E6C4894813F85D9500D3FE8D /* WildcardGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WildcardGestureRecognizer.h; sourceTree = "<group>"; };
 		E6C4894913F85D9500D3FE8D /* WildcardGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WildcardGestureRecognizer.m; sourceTree = "<group>"; };
 		E6C4894B13F86C7800D3FE8D /* poiAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = poiAnnotation.h; sourceTree = "<group>"; };
@@ -144,7 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				E60BD14B17A9B43C003F5FA3 /* AssetsLibrary.framework */,
-				E6974EF517A817BA0051589A /* NaturalistHandbook.storyboard */,
+				E6578DAE17AC03FF00BEFEEA /* NaturalistHandbook.storyboard */,
 				E6974EF317A807030051589A /* Default-568h@2x.png */,
 				E64B314513EAE0B000FA1857 /* Resources */,
 				E64B30FD13E9EBFA00FA1857 /* NaturalistLogbook */,
@@ -179,6 +187,8 @@
 		E64B30FD13E9EBFA00FA1857 /* NaturalistLogbook */ = {
 			isa = PBXGroup;
 			children = (
+				E6578DA717ABE7A900BEFEEA /* PhotoOverlayViewController.h */,
+				E6578DA817ABE7A900BEFEEA /* PhotoOverlayViewController.m */,
 				E6009A0117A959D40053AC26 /* MapDetailsViewController.h */,
 				E6009A0217A959D40053AC26 /* MapDetailsViewController.m */,
 				E6016EA413F9B1D8005B5542 /* poiView.h */,
@@ -209,6 +219,7 @@
 				E64B310013E9EBFA00FA1857 /* InfoPlist.strings */,
 				E64B310313E9EBFA00FA1857 /* NaturalistLogbook-Prefix.pch */,
 				E64B310413E9EBFA00FA1857 /* main.m */,
+				E68353E117AC09EB00E49FB0 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -236,6 +247,7 @@
 		E64B314513EAE0B000FA1857 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E68353E717B1352B00E49FB0 /* PhotoOverlayViewController.xib */,
 				E6016EA213F9B141005B5542 /* menu.png */,
 				E64B315C13EC377200FA1857 /* 71-compass.png */,
 				E64B315613EB514100FA1857 /* 68-paperclip.png */,
@@ -245,8 +257,6 @@
 				E64B315213EB4FAA00FA1857 /* 20-gear2.png */,
 				E64B315013EB4F4200FA1857 /* 103-map.png */,
 				E64B314E13EB4DAF00FA1857 /* 74-location.png */,
-				E64B314213EADFF700FA1857 /* MapViewController.xib */,
-				E64B310913E9EBFA00FA1857 /* MainWindow.xib */,
 				E6016E9F13F9ADB3005B5542 /* poi.xib */,
 				E6016EB313F9C631005B5542 /* dataModel.xcdatamodeld */,
 			);
@@ -307,6 +317,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
+				fr,
 			);
 			mainGroup = E64B30E813E9EBFA00FA1857;
 			productRefGroup = E64B30F413E9EBFA00FA1857 /* Products */;
@@ -325,8 +337,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E64B310213E9EBFA00FA1857 /* InfoPlist.strings in Resources */,
-				E64B310B13E9EBFA00FA1857 /* MainWindow.xib in Resources */,
-				E64B314413EADFF700FA1857 /* MapViewController.xib in Resources */,
 				E64B314F13EB4DAF00FA1857 /* 74-location.png in Resources */,
 				E64B315113EB4F4200FA1857 /* 103-map.png in Resources */,
 				E64B315313EB4FAA00FA1857 /* 20-gear2.png in Resources */,
@@ -338,7 +348,9 @@
 				E6016EA013F9ADB3005B5542 /* poi.xib in Resources */,
 				E6016EA313F9B141005B5542 /* menu.png in Resources */,
 				E6974EF417A807030051589A /* Default-568h@2x.png in Resources */,
-				E6974EF617A817BA0051589A /* NaturalistHandbook.storyboard in Resources */,
+				E6578DAC17AC03FF00BEFEEA /* NaturalistHandbook.storyboard in Resources */,
+				E68353E517B1352B00E49FB0 /* PhotoOverlayViewController.xib in Resources */,
+				E68353DF17AC09EB00E49FB0 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +397,7 @@
 				E6016EA613F9B1D8005B5542 /* poiView.m in Sources */,
 				E6016EB513F9C631005B5542 /* dataModel.xcdatamodeld in Sources */,
 				E6009A0317A959D40053AC26 /* MapDetailsViewController.m in Sources */,
+				E6578DAA17ABE7A900BEFEEA /* PhotoOverlayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,33 +423,46 @@
 		E64B310013E9EBFA00FA1857 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E64B310113E9EBFA00FA1857 /* en */,
+				E6578DB117AC04E600BEFEEA /* fr */,
+				E6578DB417AC04FB00BEFEEA /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		E64B310913E9EBFA00FA1857 /* MainWindow.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E64B310A13E9EBFA00FA1857 /* en */,
-			);
-			name = MainWindow.xib;
 			sourceTree = "<group>";
 		};
 		E64B312613E9EBFB00FA1857 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E64B312713E9EBFB00FA1857 /* en */,
+				E6578DB217AC04E600BEFEEA /* fr */,
+				E6578DB517AC04FB00BEFEEA /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		E64B314213EADFF700FA1857 /* MapViewController.xib */ = {
+		E6578DAE17AC03FF00BEFEEA /* NaturalistHandbook.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E64B314313EADFF700FA1857 /* en */,
+				E6578DB717AC050B00BEFEEA /* en */,
+				E68353E417B1343000E49FB0 /* fr */,
 			);
-			name = MapViewController.xib;
+			name = NaturalistHandbook.storyboard;
+			sourceTree = "<group>";
+		};
+		E68353E117AC09EB00E49FB0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E68353E017AC09EB00E49FB0 /* en */,
+				E68353E217AC09F200E49FB0 /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		E68353E717B1352B00E49FB0 /* PhotoOverlayViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E68353E617B1352B00E49FB0 /* en */,
+				E68353E817B1353200E49FB0 /* fr */,
+			);
+			name = PhotoOverlayViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -492,7 +518,7 @@
 				GCC_PREFIX_HEADER = "NaturalistLogbook/NaturalistLogbook-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "NaturalistLogbook/NaturalistLogbook-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -509,7 +535,7 @@
 				GCC_PREFIX_HEADER = "NaturalistLogbook/NaturalistLogbook-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "NaturalistLogbook/NaturalistLogbook-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;

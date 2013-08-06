@@ -40,6 +40,10 @@
     [super viewDidAppear:FALSE];
     NSAssert(toolbar != NULL, @"Toolbar is NULL");
     NSAssert([toolbar superview]== [self view] , @"Tollbar is not a subview of this one");
+
+    [mapView setUserTrackingMode:MKUserTrackingModeFollow animated:TRUE ];
+    [mapView setCenterCoordinate: userPosition animated:TRUE] ;
+    [mapView showsUserLocation] ;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -74,9 +78,6 @@
 //
 - (IBAction)locateUser:(id)sender
 {
-    [mapView setUserTrackingMode:MKUserTrackingModeFollow animated:TRUE ];
-    [mapView setCenterCoordinate: userPosition animated:TRUE] ;
-    [mapView showsUserLocation] ; 
     MKCoordinateRegion region =  MKCoordinateRegionMakeWithDistance(userPosition , 100.0f, 100.0f);
     [mapView setRegion:region animated:TRUE];
 }
@@ -144,12 +145,13 @@
 -(void) mapViewDidFailLoadingMap:(MKMapView *)mapView withError:(NSError *)error
 {
     UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:[error localizedDescription]
-                                                         message:[error localizedFailureReason]
+                                                         message: NSLocalizedString(@"TROUBLELOADING", @"")
                                                         delegate:nil
                                                cancelButtonTitle:@"OK"
                                                otherButtonTitles:nil];
     [errorAlert show];
     [uiaiv stopAnimating] ;
+    [[self mapView]setMapType:MKMapTypeStandard] ;
 }
 //
 - (void)mapView:(MKMapView *)mapView didChangeUserTrackingMode:(MKUserTrackingMode)mode animated:(BOOL)animated
@@ -191,7 +193,7 @@
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
-
+    [picker dismissViewControllerAnimated:TRUE completion:nil] ;
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
@@ -253,7 +255,33 @@
             [uiipc setCameraDevice:UIImagePickerControllerCameraDeviceRear];
             [uiipc setCameraFlashMode:UIImagePickerControllerCameraFlashModeOff] ;
             [uiipc setCameraCaptureMode:UIImagePickerControllerCameraCaptureModePhoto] ;
+            [uiipc setMediaTypes:[UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeCamera]];
+            // replacing standard controls
+            povc = nil ; 
+            if (povc ==nil) {
+                povc = [[PhotoOverlayViewController alloc] initWithNibName:@"PhotoOverlayViewController" bundle:nil] ;
+            }
+            [povc setDelegate:(id) self ] ;
+            [povc setImagePickerController:uiipc ] ;
         }
     }
+    if ([segue.identifier isEqualToString:@"details"]) {
+        MapDetailsViewController *mdvc = (MapDetailsViewController *)[segue destinationViewController] ;
+        [mdvc setMapView:[self mapView]];
+    }
+}
+#pragma mark - 
+#pragma mark PhotoOverlayViewControllerDelegate
+-(void) animals
+{
+
+}
+-(void) marks
+{
+
+}
+-(void) trails
+{
+
 }
 @end

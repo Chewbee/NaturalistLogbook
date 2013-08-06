@@ -12,9 +12,11 @@
 #import "UserLocationView.h"
 #import "poiAnnotation.h"
 #import "poiView.h"
+#import "MapDetailsViewController.h"
+#import "PhotoOverlayViewController.h"
 
 
-@interface MapViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate, UIImagePickerControllerDelegate, UIAlertViewDelegate >
+@interface MapViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate, UIImagePickerControllerDelegate, UIAlertViewDelegate ,PhotoOverlayViewControllerDelegate >
 {
 
     IBOutlet MKMapView  *mapView;
@@ -35,7 +37,8 @@
     UserLocationView                    *userView ;
     poiView                             *pv ;
     
-    poiAnnotation                       *poi ; 
+    poiAnnotation                       *poi ;
+    PhotoOverlayViewController          *povc ; 
 }
 
 @property (nonatomic,strong) poiView *pv;

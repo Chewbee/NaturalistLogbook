@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  NaturalistLogbook
+
+  Created by Georges-Henry Portefait on 02/08/13.
+
+*/
+
+@"TROUBLELOADING" = @"Probleme de chargement de la carte satellite, je repasse en standard, vous pouvez reactivez le mode satellite via le bouton info"

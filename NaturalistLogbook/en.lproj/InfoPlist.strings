@@ -1,2 +1,5 @@
-/* Localized versions of Info.plist keys */
+/* ENGLISH Localized versions of Info.plist keys */
 
+
+CFBundleDisplayName = "Naturalist Handbook";
+CFBundleName = "Naturalist";

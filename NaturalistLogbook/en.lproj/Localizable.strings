@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  NaturalistLogbook
+
+  Created by Georges-Henry Portefait on 02/08/13.
+
+*/
+
+@"TROUBLELOADING" = @"Trouble loading satellite tiles, reverting to standard mode, you can reactivate satellite mode from the info button"

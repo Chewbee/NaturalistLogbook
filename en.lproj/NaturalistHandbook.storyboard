@@ -5,16 +5,16 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--Second View Controller - Details-->
+        <!--Second View Controller - Bearing-->
         <scene sceneID="tNQ-ye-TcS">
             <objects>
                 <viewController id="HBb-M7-isa" customClass="SecondViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nL7-BR-QGi">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Details" image="72-pin.png" id="EMw-oO-kCt"/>
+                    <tabBarItem key="tabBarItem" title="Bearing" image="71-compass.png" id="EMw-oO-kCt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yAb-DZ-H6H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -25,21 +25,68 @@
             <objects>
                 <viewController id="mf1-RS-deo" customClass="MapDetailsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BA4-am-uWE">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="J73-hi-bDK">
+                                <segments>
+                                    <segment title="Standard"/>
+                                    <segment title="Satellite"/>
+                                    <segment title="Hybrid"/>
+                                </segments>
+                                <connections>
+                                    <action selector="mapTypeSegmentedAction:" destination="mf1-RS-deo" eventType="valueChanged" id="qrh-R2-wyN"/>
+                                </connections>
+                            </segmentedControl>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mPR-Qp-f7p">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="77" id="tPF-4t-XcF"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="autoOrientSwitchAction:" destination="mf1-RS-deo" eventType="valueChanged" id="DMZ-pB-f4a"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Auto Orient Map" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPp-Xp-E9U">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Map Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9FR-aa-2si">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JPp-Xp-E9U" firstAttribute="leading" secondItem="BA4-am-uWE" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="3R8-iq-Wcb"/>
+                            <constraint firstItem="mPR-Qp-f7p" firstAttribute="leading" secondItem="JPp-Xp-E9U" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="C0z-V9-cCH"/>
+                            <constraint firstAttribute="bottom" secondItem="J73-hi-bDK" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="GIt-6K-puK"/>
+                            <constraint firstItem="9FR-aa-2si" firstAttribute="leading" secondItem="BA4-am-uWE" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Jw3-pG-1Ym"/>
+                            <constraint firstItem="J73-hi-bDK" firstAttribute="top" secondItem="9FR-aa-2si" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="NVT-yJ-l6i"/>
+                            <constraint firstItem="mPR-Qp-f7p" firstAttribute="centerY" secondItem="JPp-Xp-E9U" secondAttribute="centerY" type="default" id="UCp-aH-wzz"/>
+                            <constraint firstAttribute="trailing" secondItem="mPR-Qp-f7p" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="dJU-d0-4aB"/>
+                            <constraint firstAttribute="trailing" secondItem="9FR-aa-2si" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="iyz-uC-i1Z"/>
+                            <constraint firstItem="9FR-aa-2si" firstAttribute="top" secondItem="JPp-Xp-E9U" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="kFJ-hO-NHM"/>
+                            <constraint firstAttribute="trailing" secondItem="J73-hi-bDK" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="sZd-zH-fsA"/>
+                            <constraint firstItem="J73-hi-bDK" firstAttribute="leading" secondItem="BA4-am-uWE" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="yyk-NG-YTf"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="autoOrientSwitch" destination="mPR-Qp-f7p" id="JL0-0y-YWh"/>
+                        <outlet property="mapTypeSegmented" destination="J73-hi-bDK" id="H8G-Nb-xdq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yCS-a0-6du" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="826" y="239"/>
+            <point key="canvasLocation" x="874" y="-326"/>
         </scene>
         <!--View Controller - Item-->
         <scene sceneID="QIu-GA-hP2">
             <objects>
                 <viewController id="R5N-4Y-xRa" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZWE-wJ-n8V">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -50,12 +97,26 @@
             </objects>
             <point key="canvasLocation" x="301" y="861"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="JuC-zm-FeW">
+            <objects>
+                <viewController id="CPt-ff-T9C" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N1x-Bt-nfh">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HWE-hW-jnd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="874" y="239"/>
+        </scene>
         <!--Map View Controller - Map-->
         <scene sceneID="QuV-ps-Thy">
             <objects>
                 <viewController id="oNj-Pq-nbx" customClass="MapViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pr6-vU-SRi">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="WK4-uh-Q8a">
@@ -77,12 +138,25 @@
                                     </barButtonItem>
                                     <barButtonItem image="68-paperclip.png" id="gOy-9W-kw3">
                                         <connections>
-                                            <segue destination="mf1-RS-deo" kind="modal" id="uKo-rP-ceV"/>
+                                            <segue destination="CPt-ff-T9C" kind="modal" id="87j-0e-waD"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Jgu-NH-8id"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUT-S7-G6D">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mf1-RS-deo" kind="modal" identifier="details" modalTransitionStyle="partialCurl" id="rt4-r8-mg7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -95,11 +169,14 @@
                             <constraint firstItem="S9Q-VB-wjJ" firstAttribute="leading" secondItem="pr6-vU-SRi" secondAttribute="leading" type="default" id="ffg-Fi-p4h"/>
                             <constraint firstItem="S9Q-VB-wjJ" firstAttribute="top" secondItem="pr6-vU-SRi" secondAttribute="top" type="default" id="mWm-MA-iPx"/>
                             <constraint firstItem="Jgu-NH-8id" firstAttribute="top" secondItem="pr6-vU-SRi" secondAttribute="top" constant="3" id="u0Y-ie-r7e"/>
+                            <constraint firstAttribute="bottom" secondItem="gUT-S7-G6D" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="ydK-1d-mtk"/>
+                            <constraint firstItem="gUT-S7-G6D" firstAttribute="trailing" secondItem="Jgu-NH-8id" secondAttribute="trailing" type="default" id="zSk-dM-UN7"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="103-map.png" id="lct-RB-6GV"/>
                     <connections>
                         <outlet property="cameraButton" destination="fGz-bc-QlQ" id="6fU-Pk-7yo"/>
+                        <outlet property="infoButton" destination="gUT-S7-G6D" id="G0B-8j-oYe"/>
                         <outlet property="locateButton" destination="MaV-On-FjE" id="NEV-eg-HDs"/>
                         <outlet property="mapView" destination="WK4-uh-Q8a" id="AZz-Bo-iNx"/>
                         <outlet property="toolbar" destination="S9Q-VB-wjJ" id="Tzc-DR-TGY"/>
@@ -115,7 +192,7 @@
             <objects>
                 <viewController id="RG4-jo-Wfr" customClass="UIImagePickerController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6nt-2B-bkH">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -123,14 +200,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wbY-q9-pPH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="826" y="-326"/>
+            <point key="canvasLocation" x="874" y="-910"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="jtY-8y-CJf">
             <objects>
                 <tabBarController wantsFullScreenLayout="YES" definesPresentationContext="YES" id="FOi-d3-j4k" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="f3u-N5-nrE"/>
-                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="hmM-ke-CTM">
@@ -159,10 +236,46 @@
         <image name="103-map.png" width="26" height="21"/>
         <image name="20-gear2.png" width="26" height="28"/>
         <image name="68-paperclip.png" width="14" height="26"/>
-        <image name="72-pin.png" width="10" height="20"/>
+        <image name="71-compass.png" width="24" height="24"/>
         <image name="74-location.png" width="20" height="20"/>
         <image name="86-camera.png" width="24" height="18"/>
     </resources>
+    <classes>
+        <class className="MapDetailsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapDetailsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="autoOrientSwitchAction:"/>
+                <relationship kind="action" name="mapTypeSegmentedAction:"/>
+                <relationship kind="outlet" name="autoOrientSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="mapTypeSegmented" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
+        <class className="MapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="locateUser:"/>
+                <relationship kind="outlet" name="cameraButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="infoButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="locateButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="toolbar" candidateClass="UIToolbar"/>
+                <relationship kind="outlet" name="uiaiv" candidateClass="UIActivityIndicatorView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="NaturalistLogbookAppDelegate" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NaturalistLogbookAppDelegate.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tabBarController" candidateClass="UITabBarController"/>
+                <relationship kind="outlet" name="window" candidateClass="UIWindow"/>
+            </relationships>
+        </class>
+        <class className="SecondViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SecondViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

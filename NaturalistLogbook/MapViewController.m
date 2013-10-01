@@ -22,6 +22,10 @@
 {
     [super viewDidLoad] ;
     [mapView setMapType:MKMapTypeHybrid ] ;
+
+    [mapView setUserTrackingMode:MKUserTrackingModeFollow animated:TRUE ];
+    [mapView setCenterCoordinate: userPosition animated:TRUE] ;
+    [mapView showsUserLocation] ;
     
     [self startLocationStandardUpdates ] ; 
     
@@ -40,10 +44,6 @@
     [super viewDidAppear:FALSE];
     NSAssert(toolbar != NULL, @"Toolbar is NULL");
     NSAssert([toolbar superview]== [self view] , @"Tollbar is not a subview of this one");
-
-    [mapView setUserTrackingMode:MKUserTrackingModeFollow animated:TRUE ];
-    [mapView setCenterCoordinate: userPosition animated:TRUE] ;
-    [mapView showsUserLocation] ;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

@@ -27,8 +27,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self initcontrols];
 
+}
+-(void) viewWillAppear:(BOOL)animated {
+    [self initcontrols];
 }
 
 - (void)initcontrols
@@ -47,7 +49,8 @@
         default:
             break;
     }
-    [[self autoOrientSwitch] setOn:[[self mapView] userTrackingMode] == MKUserTrackingModeFollowWithHeading];
+    BOOL toSet = [[self mapView] userTrackingMode] == MKUserTrackingModeFollowWithHeading ;
+    [[self autoOrientSwitch] setOn: toSet ];
 }
 
 

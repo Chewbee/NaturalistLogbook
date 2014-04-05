@@ -27,7 +27,7 @@
     
 }
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
-    NSLog(@"Touch Moved %d", [[event allTouches] count]);
+    NSLog(@"Touch Moved %lu", (unsigned long)[[event allTouches] count]);
 }
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     if (touchesEndedCallback)

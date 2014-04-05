@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="FOi-d3-j4k">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="FOi-d3-j4k">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
@@ -9,6 +9,10 @@
         <scene sceneID="tNQ-ye-TcS">
             <objects>
                 <viewController id="HBb-M7-isa" customClass="SecondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XC1-Th-quH"/>
+                        <viewControllerLayoutGuide type="bottom" id="VaA-cZ-Yl0"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="nL7-BR-QGi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -26,31 +30,43 @@
         <scene sceneID="DrG-Nm-1t5">
             <objects>
                 <viewController id="mf1-RS-deo" customClass="MapDetailsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oBN-eG-bBJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="5Mj-Vc-urD"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="BA4-am-uWE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="J73-hi-bDK">
-                                <rect key="frame" x="20" y="520" width="280" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="J73-hi-bDK">
+                                <rect key="frame" x="77" y="480" width="223" height="29"/>
                                 <segments>
                                     <segment title="Standard"/>
                                     <segment title="Satellite"/>
-                                    <segment title="Hybrid"/>
+                                    <segment title="Hybride"/>
                                 </segments>
                                 <connections>
                                     <action selector="mapTypeSegmentedAction:" destination="mf1-RS-deo" eventType="valueChanged" id="qrh-R2-wyN"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Auto Orient Map" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JPp-Xp-E9U">
-                                <rect key="frame" x="20" y="446" width="195" height="21"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nn5-xs-Lno">
+                                <rect key="frame" x="251" y="441" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="autoOrientSwitchAction:" destination="mf1-RS-deo" eventType="valueChanged" id="vak-w9-h01"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Orientation de la carte" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSI-Y5-o4A">
+                                <rect key="frame" x="20" y="446" width="171" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Map Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9FR-aa-2si">
-                                <rect key="frame" x="20" y="491" width="280" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehC-Sh-0MD">
+                                <rect key="frame" x="20" y="483" width="36" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -59,6 +75,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="autoOrientSwitch" destination="Nn5-xs-Lno" id="XhG-lf-ACe"/>
                         <outlet property="mapTypeSegmented" destination="J73-hi-bDK" id="H8G-Nb-xdq"/>
                     </connections>
                 </viewController>
@@ -70,6 +87,10 @@
         <scene sceneID="QIu-GA-hP2">
             <objects>
                 <viewController id="R5N-4Y-xRa" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hkb-No-gMq"/>
+                        <viewControllerLayoutGuide type="bottom" id="IRh-4l-gOp"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ZWE-wJ-n8V">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -88,6 +109,10 @@
         <scene sceneID="JuC-zm-FeW">
             <objects>
                 <viewController id="CPt-ff-T9C" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GaY-Nz-sdd"/>
+                        <viewControllerLayoutGuide type="bottom" id="711-2r-24D"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="N1x-Bt-nfh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -103,19 +128,23 @@
         <!--Map View Controller - Carte-->
         <scene sceneID="QuV-ps-Thy">
             <objects>
-                <viewController id="oNj-Pq-nbx" customClass="MapViewController" sceneMemberID="viewController">
+                <viewController autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" id="oNj-Pq-nbx" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gy4-Tt-CBG"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ri2-QJ-TmU"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="pr6-vU-SRi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" id="WK4-uh-Q8a">
-                                <rect key="frame" x="0.0" y="75" width="320" height="444"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WK4-uh-Q8a">
+                                <rect key="frame" x="0.0" y="113" width="320" height="406"/>
                                 <connections>
                                     <outlet property="delegate" destination="oNj-Pq-nbx" id="zgf-eY-62G"/>
                                 </connections>
                             </mapView>
-                            <toolbar autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="S9Q-VB-wjJ">
-                                <rect key="frame" x="0.0" y="31" width="320" height="44"/>
+                            <toolbar autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S9Q-VB-wjJ">
+                                <rect key="frame" x="0.0" y="50" width="320" height="44"/>
                                 <items>
                                     <barButtonItem image="74-location.png" id="MaV-On-FjE">
                                         <connections>
@@ -134,10 +163,10 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" animating="YES" style="white" id="Jgu-NH-8id">
-                                <rect key="frame" x="290" y="11" width="20" height="20"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Jgu-NH-8id">
+                                <rect key="frame" x="290" y="43" width="20" height="20"/>
                             </activityIndicatorView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="gUT-S7-G6D">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUT-S7-G6D">
                                 <rect key="frame" x="288" y="482" width="22" height="22"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal">
@@ -176,12 +205,18 @@
         <scene sceneID="NnB-4i-HAF">
             <objects>
                 <viewController id="RG4-jo-Wfr" customClass="UIImagePickerController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ufg-WB-EjM"/>
+                        <viewControllerLayoutGuide type="bottom" id="RB6-af-87F"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6nt-2B-bkH">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Back" prompt="To go back" id="dqj-Cv-eq8"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
@@ -231,6 +266,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
 </document>

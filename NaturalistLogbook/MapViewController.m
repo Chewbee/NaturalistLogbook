@@ -244,44 +244,54 @@
 //
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.identifier isEqualToString:@"photo"]) {
+    if ([segue.identifier isEqualToString:@"photo"])
+    {
         UIImagePickerController *uiipc = (UIImagePickerController*) segue.destinationViewController ;
 
         [uiipc setDelegate: (id)self ];
         
-        if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera] &&
-            [UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceRear]) {
-            [uiipc setSourceType:UIImagePickerControllerSourceTypeCamera] ;
-            [uiipc setCameraDevice:UIImagePickerControllerCameraDeviceRear];
-            [uiipc setCameraFlashMode:UIImagePickerControllerCameraFlashModeOff] ;
-            [uiipc setCameraCaptureMode:UIImagePickerControllerCameraCaptureModePhoto] ;
-            [uiipc setMediaTypes:[UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeCamera]];
+        if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera] &&
+            [UIImagePickerController isCameraDeviceAvailable: UIImagePickerControllerCameraDeviceRear])
+        {
+            [uiipc setSourceType: UIImagePickerControllerSourceTypeCamera] ;
+            [uiipc setCameraDevice: UIImagePickerControllerCameraDeviceRear];
+            [uiipc setCameraFlashMode: UIImagePickerControllerCameraFlashModeOff] ;
+            [uiipc setCameraCaptureMode: UIImagePickerControllerCameraCaptureModePhoto] ;
+            [uiipc setMediaTypes:
+             [UIImagePickerController availableMediaTypesForSourceType: UIImagePickerControllerSourceTypeCamera]] ;
+            [uiipc setShowsCameraControls:FALSE];
+            
             // replacing standard controls
-            povc = nil ; 
-            if (povc ==nil) {
+            povc = nil ;
+            if (povc == nil) {
                 povc = [[PhotoOverlayViewController alloc] initWithNibName:@"PhotoOverlayViewController" bundle:nil] ;
             }
             [povc setDelegate:(id) self ] ;
-            [povc setImagePickerController:uiipc ] ;
+            [uiipc setCameraOverlayView:[povc view]];
         }
     }
-    if ([segue.identifier isEqualToString:@"details"]) {
+    if ([segue.identifier isEqualToString:@"details"])
+    {
         MapDetailsViewController *mdvc = (MapDetailsViewController *)[segue destinationViewController] ;
         [mdvc setMapView:[self mapView]];
     }
 }
 #pragma mark - 
 #pragma mark PhotoOverlayViewControllerDelegate
--(void) animals
+-(void) PhotoOverlayViewControllerDelegateAnimals
 {
 
 }
--(void) marks
+-(void) PhotoOverlayViewControllerDelegateMarks
 {
 
 }
--(void) trails
+-(void) PhotoOverlayViewControllerDelegateTrails
 {
 
 }
+-(void) PhotoOverlayViewControllerDelegateCancel {
+   // [povc dismissModalViewControllerAnimated] ;
+}
+
 @end

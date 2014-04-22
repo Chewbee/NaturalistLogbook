@@ -16,13 +16,7 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-        [[self imagePickerController] setShowsCameraControls:FALSE] ;
-        [self.imagePickerController.cameraOverlayView addSubview:self.view];
-    }
-    return self;
+    return [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
 }
 
 - (void)viewDidLoad
@@ -50,5 +44,8 @@
 }
 
 - (IBAction)marksAction:(id)sender {
+}
+- (IBAction)cancelAction:(id)sender {
+    [[self delegate]PhotoOverlayViewControllerDelegateCancel];
 }
 @end

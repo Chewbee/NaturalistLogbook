@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @protocol PhotoOverlayViewControllerDelegate
--(void) animals ;
--(void) marks;
--(void) trails ;
+-(void) PhotoOverlayViewControllerDelegateAnimals ;
+-(void) PhotoOverlayViewControllerDelegateMarks;
+-(void) PhotoOverlayViewControllerDelegateTrails ;
+-(void) PhotoOverlayViewControllerDelegateCancel ;
 @end
 
 @interface PhotoOverlayViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
@@ -25,6 +26,7 @@
 - (IBAction)animalsAction:(id)sender;
 - (IBAction)trailsAction:(id)sender;
 - (IBAction)marksAction:(id)sender;
+- (IBAction)cancelAction:(id)sender;
 
 @end
 

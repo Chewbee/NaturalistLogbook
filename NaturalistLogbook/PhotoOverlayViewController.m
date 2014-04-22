@@ -38,13 +38,17 @@
 }
 
 - (IBAction)animalsAction:(id)sender {
+    [[self delegate]PhotoOverlayViewControllerDelegateAnimals];
 }
 
 - (IBAction)trailsAction:(id)sender {
+    [[self delegate] PhotoOverlayViewControllerDelegateTrails];
 }
 
 - (IBAction)marksAction:(id)sender {
+    [[self delegate] PhotoOverlayViewControllerDelegateMarks];
 }
+
 - (IBAction)cancelAction:(id)sender {
     [[self delegate]PhotoOverlayViewControllerDelegateCancel];
 }
